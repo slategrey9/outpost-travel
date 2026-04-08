@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <style>
 
     /* =====================
@@ -63,6 +64,10 @@
     [data-animate].fade-only {
       transform: none;
       transition: opacity 1s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] { opacity: 1; transform: none; transition: none; }
+      .marquee-track { animation: none; }
     }
 
     /* =====================
@@ -121,6 +126,11 @@
       border-color: rgba(246,241,232,0.8);
       background-color: rgba(246,241,232,0.08);
     }
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
 
     /* =====================
        NAV — MASTHEAD 3-COLUMN
@@ -169,7 +179,7 @@
       font-weight: 400;
       font-size: 1.3rem;
       letter-spacing: 0.18em;
-      color: #F6F1E8;
+      color: var(--cream);
       transition: color 0.3s ease;
     }
     .nav.nav--scrolled .nav-logo-outpost { color: var(--text); }
@@ -236,7 +246,7 @@
       pointer-events: none;
       transition: opacity 0.3s ease;
     }
-    .mobile-nav.open { opacity: 1; pointer-events: all; }
+    .mobile-nav.open { opacity: 1; pointer-events: auto; }
     .mobile-nav a {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
@@ -329,7 +339,7 @@
     .hero-content h1 {
       font-size: clamp(3rem, 6vw, 5.6rem);
       font-weight: 300;
-      color: #F6F1E8;
+      color: var(--cream);
       letter-spacing: -0.01em;
       line-height: 1.05;
       margin-bottom: 1.4rem;
@@ -704,7 +714,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       padding: 28px 26px;
-      color: #F6F1E8;
+      color: var(--cream);
     }
     .dest-card-name {
       font-family: 'Cormorant Garamond', serif;
@@ -771,7 +781,7 @@
     .lead-content h2 {
       font-size: clamp(2rem, 4.5vw, 3.2rem);
       font-weight: 300;
-      color: #F6F1E8;
+      color: var(--cream);
       margin-bottom: 16px;
     }
     .lead-sub {
@@ -839,7 +849,7 @@
       font-family: 'Jost', sans-serif;
       font-weight: 300;
       font-size: 0.82rem;
-      color: #F6F1E8;
+      color: var(--cream);
       outline: none;
       transition: border-color 0.2s ease;
     }
@@ -1386,4 +1396,3 @@
 
 </body>
 </html>
-<!-- auto-deploy test Wed Apr  8 14:48:19 +08 2026 -->

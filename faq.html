@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <style>
 
     /* =====================
@@ -59,6 +60,9 @@
     [data-animate].is-visible { opacity: 1; transform: translateY(0); }
     [data-animate].delay-1 { transition-delay: 0.08s; }
     [data-animate].delay-2 { transition-delay: 0.16s; }
+    @media (prefers-reduced-motion: reduce) {
+      [data-animate] { opacity: 1; transform: none; transition: none; }
+    }
 
     /* =====================
        SHARED HELPERS
@@ -115,6 +119,11 @@
     .btn-outline-light:hover {
       border-color: rgba(246,241,232,0.8);
       background-color: rgba(246,241,232,0.08);
+    }
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 2px;
     }
 
     /* =====================
@@ -221,7 +230,7 @@
       pointer-events: none;
       transition: opacity 0.3s ease;
     }
-    .mobile-nav.open { opacity: 1; pointer-events: all; }
+    .mobile-nav.open { opacity: 1; pointer-events: auto; }
     .mobile-nav a {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
@@ -510,7 +519,7 @@
     .lead-content h2 {
       font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 300;
-      color: #F6F1E8;
+      color: var(--cream);
       margin-bottom: 14px;
     }
     .lead-sub {
@@ -573,7 +582,7 @@
       font-family: 'Jost', sans-serif;
       font-weight: 300;
       font-size: 0.82rem;
-      color: #F6F1E8;
+      color: var(--cream);
       outline: none;
       transition: border-color 0.2s ease;
     }
