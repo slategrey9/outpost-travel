@@ -131,7 +131,7 @@
     .nav-logo-travel {
       font-family: 'Jost', sans-serif;
       font-weight: 300;
-      font-size: 0.42rem;
+      font-size: 0.65rem;
       letter-spacing: 0.44em;
       text-transform: uppercase;
       color: var(--text-light);
@@ -141,7 +141,34 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      gap: 20px;
     }
+    .nav-wa {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--text-mid);
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-wa:hover { color: var(--gold); }
+    .nav-cta {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 9px 20px;
+      border-radius: 100px;
+      background-color: var(--gold);
+      color: var(--navy);
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background-color: var(--gold-dark); }
     .hamburger {
       display: none;
       flex-direction: column;
@@ -316,6 +343,7 @@
       background-color: var(--cream);
       cursor: pointer;
       transition: border-color 0.2s ease, background-color 0.2s ease;
+      height: 100%;
     }
     .service-option label:hover {
       border-color: var(--gold);
@@ -336,6 +364,22 @@
       font-size: 0.74rem;
       color: var(--text-light);
       line-height: 1.5;
+    }
+    .service-option-helper {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.6rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 8px;
+    }
+    /* Currency + budget row */
+    .field-row-currency {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      align-items: end;
     }
 
     /* =====================
@@ -458,12 +502,14 @@
       margin-top: 14px;
       line-height: 1.6;
     }
-    .form-privacy a {
+    .form-thankyou {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
       color: var(--text-light);
-      border-bottom: 1px solid var(--sand);
-      transition: color 0.2s ease, border-color 0.2s ease;
+      margin-top: 10px;
+      line-height: 1.6;
     }
-    .form-privacy a:hover { color: var(--gold); border-color: var(--gold); }
 
     /* =====================
        SUCCESS STATE
@@ -640,6 +686,11 @@
       <span class="nav-logo-travel">TRAVEL</span>
     </a>
     <div class="nav-right">
+      <a href="https://wa.me/6597514830" class="nav-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        WhatsApp
+      </a>
+      <a href="start-planning.html" class="nav-cta">Start Planning</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -711,26 +762,28 @@
             <div class="service-option">
               <input
                 type="radio"
-                id="type-hotel"
+                id="type-trip"
                 name="service_type"
-                value="Hotel Booking"
+                value="Trip Planning"
+                checked
                 required
               />
-              <label for="type-hotel">
-                <span class="service-option-title">Hotel Booking</span>
-                <span class="service-option-desc">You know where you're going; we'll handle the rest.</span>
+              <label for="type-trip">
+                <span class="service-option-title">Trip Planning</span>
+                <span class="service-option-desc">A bigger journey, end-to-end.</span>
               </label>
             </div>
             <div class="service-option">
               <input
                 type="radio"
-                id="type-trip"
+                id="type-hotel"
                 name="service_type"
-                value="Trip Planning"
+                value="Hotel Booking"
               />
-              <label for="type-trip">
-                <span class="service-option-title">Trip Planning</span>
-                <span class="service-option-desc">A bigger journey, end-to-end.</span>
+              <label for="type-hotel">
+                <span class="service-option-title">Hotel Booking</span>
+                <span class="service-option-desc">You know where you're going; we'll handle the rest.</span>
+                <span class="service-option-helper">Hotel booking only? Click here</span>
               </label>
             </div>
           </div>
@@ -739,36 +792,25 @@
         <!-- HOTEL BOOKING FIELDS -->
         <div class="form-section" id="section-hotel" aria-label="Hotel booking details">
           <div class="field-group" data-animate>
-            <label for="hotel-destination">Destination</label>
+            <label for="hotel-destination">Where are you thinking of going?</label>
+            <span class="field-hint">A specific destination, a region, or "open to ideas" — all fine.</span>
             <input
               type="text"
               id="hotel-destination"
               name="destination"
-              placeholder="e.g. Kyoto, Japan"
+              placeholder="e.g. Tokyo, Maldives, open to suggestions..."
               autocomplete="off"
             />
           </div>
-          <div class="field-row" data-animate delay-1>
-            <div class="field-group">
-              <label for="hotel-checkin">Check-in</label>
-              <input
-                type="text"
-                id="hotel-checkin"
-                name="check_in"
-                placeholder="dd/mm/yyyy"
-                autocomplete="off"
-              />
-            </div>
-            <div class="field-group">
-              <label for="hotel-checkout">Check-out</label>
-              <input
-                type="text"
-                id="hotel-checkout"
-                name="check_out"
-                placeholder="dd/mm/yyyy"
-                autocomplete="off"
-              />
-            </div>
+          <div class="field-group" data-animate delay-1>
+            <label for="hotel-dates">Approximate travel dates</label>
+            <input
+              type="text"
+              id="hotel-dates"
+              name="travel_dates"
+              placeholder="e.g. August 2026, flexible"
+              autocomplete="off"
+            />
           </div>
           <div class="field-row" data-animate delay-1>
             <div class="field-group">
@@ -782,15 +824,21 @@
               </select>
             </div>
             <div class="field-group">
-              <label for="hotel-budget">Budget per night (USD)</label>
-              <select id="hotel-budget" name="budget_per_night">
-                <option value="" disabled selected></option>
-                <option>Under $300</option>
-                <option>$300 – $600</option>
-                <option>$600 – $1,000</option>
-                <option>$1,000 – $2,000</option>
-                <option>$2,000+</option>
-              </select>
+              <label for="hotel-budget">Budget per room per night</label>
+              <div class="field-row-currency">
+                <select id="hotel-currency" name="budget_currency" aria-label="Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="SGD">SGD</option>
+                </select>
+                <select id="hotel-budget" name="budget_per_room_night">
+                  <option value="" disabled selected></option>
+                  <option>Under $300</option>
+                  <option>$300 – $600</option>
+                  <option>$600 – $1,000</option>
+                  <option>$1,000 – $2,000</option>
+                  <option>$2,000+</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="field-group" data-animate delay-2>
@@ -932,10 +980,8 @@
           </div>
           <div class="form-submit" data-animate delay-2>
             <button type="submit" class="btn-submit">Send enquiry</button>
-            <p class="form-privacy">
-              We'll only use your details to get back to you about your trip.
-              Read our <a href="privacy.html">Privacy Policy</a>.
-            </p>
+            <p class="form-privacy">We'll only use your details to get back to you about your trip.</p>
+            <p class="form-thankyou">We appreciate you taking the time to complete this form.</p>
           </div>
         </div>
 
@@ -1016,6 +1062,9 @@
 
     radioHotel.addEventListener('change', () => showSection('hotel'));
     radioTrip.addEventListener('change',  () => showSection('trip'));
+
+    /* Default: show Trip Planning on load */
+    showSection('trip');
 
     /* Netlify form submission */
     const form = document.getElementById('planningForm');

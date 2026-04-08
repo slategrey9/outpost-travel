@@ -186,10 +186,10 @@
     .nav-logo-travel {
       font-family: 'Jost', sans-serif;
       font-weight: 300;
-      font-size: 0.42rem;
+      font-size: 0.65rem;
       letter-spacing: 0.44em;
       text-transform: uppercase;
-      color: rgba(246,241,232,0.45);
+      color: rgba(246,241,232,0.7);
       margin-top: 4px;
       transition: color 0.3s ease;
     }
@@ -198,8 +198,22 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 28px;
+      gap: 20px;
     }
+    .nav-wa {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: rgba(246,241,232,0.6);
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-wa:hover { color: var(--gold); }
+    .nav.nav--scrolled .nav-wa { color: var(--text-mid); }
     .nav-cta {
       font-family: 'Jost', sans-serif;
       font-weight: 500;
@@ -290,7 +304,7 @@
     .hero-bg {
       position: absolute;
       inset: -12% 0;
-      background-image: url('images/amankora-tigers-nest.jpg');
+      background-image: url('images/hero.jpg');
       background-size: cover;
       background-position: center 25%;
       will-change: transform;
@@ -418,7 +432,7 @@
     .service-panel {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      min-height: 560px;
+      min-height: 640px;
     }
     .service-panel:nth-child(even) { direction: rtl; }
     .service-panel:nth-child(even) > * { direction: ltr; }
@@ -473,11 +487,18 @@
       position: relative;
     }
     .service-panel-list li::before {
-      content: '—';
+      content: '·';
       position: absolute;
       left: 0;
       color: var(--gold);
-      font-size: 0.7rem;
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+    .service-panel-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 4px;
     }
 
     /* =====================
@@ -567,13 +588,19 @@
     .process-steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      column-gap: 80px;
     }
     .process-step {
-      padding-right: 40px;
-      border-right: 1px solid var(--sand);
+      position: relative;
     }
-    .process-step:last-child { border-right: none; padding-right: 0; }
-    .process-step:not(:first-child) { padding-left: 40px; }
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: 0; bottom: 0;
+      width: 1px;
+      background-color: var(--sand);
+    }
     .process-num {
       font-family: 'Cormorant Garamond', serif;
       font-size: 5.5rem;
@@ -741,6 +768,36 @@
       font-style: italic;
       font-size: 1.2rem;
       color: var(--text-mid);
+    }
+
+    /* =====================
+       BRAINSTORM STRIP
+    ===================== */
+    .brainstorm {
+      background-color: var(--cream-mid);
+      padding: 72px 52px;
+      border-top: 1px solid var(--sand);
+    }
+    .brainstorm-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .brainstorm-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+    .brainstorm-body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 28px;
     }
 
     /* =====================
@@ -1070,6 +1127,10 @@
       <span class="nav-logo-travel">TRAVEL</span>
     </a>
     <div class="nav-right">
+      <a href="https://wa.me/6597514830" class="nav-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        WhatsApp
+      </a>
       <a href="start-planning.html" class="nav-cta">Start Planning</a>
       <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -1079,14 +1140,14 @@
 
   <!-- HERO — FULL BLEED, BOTTOM-LEFT -->
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" id="heroBg" role="img" aria-label="Tiger's Nest Monastery perched on cliff, Bhutan"></div>
+    <div class="hero-bg" id="heroBg" role="img" aria-label="Dramatic mountain landscape at dusk"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <div class="hero-pre" data-animate>
         <span class="hero-rule" aria-hidden="true"></span>
         <span class="eyebrow">Luxury Travel Concierge &middot; Singapore</span>
       </div>
-      <h1 id="hero-heading" data-animate>Travel the way<br>it should feel.</h1>
+      <h1 id="hero-heading" data-animate>Travel the way<br>it should feel</h1>
       <p class="hero-sub" data-animate>Hotel perks you can't get online. Complex itineraries, flawlessly handled.</p>
       <div class="hero-ctas" data-animate>
         <a href="start-planning.html" class="btn-gold">Plan a Trip</a>
@@ -1120,14 +1181,17 @@
       </div>
       <div class="service-panel-text">
         <span class="eyebrow" data-animate>Hotel Bookings</span>
-        <h2 data-animate>Tell us where<br>you're going.</h2>
+        <h2 data-animate>Tell us where you're going</h2>
         <p data-animate>Already know where you're headed? Share your destination, dates, and a rough budget. We'll take care of everything from there — and make sure your stay comes with more than you'd get booking on your own.</p>
         <ul class="service-panel-list" data-animate>
           <li>No fees — the hotels pay us directly</li>
           <li>Upgrades, breakfast, and hotel credits</li>
           <li>Early check-in and late checkout where available</li>
         </ul>
-        <a href="start-planning.html" class="text-link" data-animate>Get in touch &rarr;</a>
+        <div class="service-panel-ctas" data-animate>
+          <a href="start-planning.html" class="text-link">Fill out our online form &rarr;</a>
+          <a href="https://wa.me/6597514830?text=Hi%20Kristin%2C%20I%27d%20like%20to%20book%20a%20discovery%20call." class="text-link" target="_blank" rel="noopener noreferrer">Book a discovery call &rarr;</a>
+        </div>
       </div>
     </div>
 
@@ -1141,10 +1205,13 @@
       </div>
       <div class="service-panel-text">
         <span class="eyebrow" data-animate>Trip Planning</span>
-        <h2 data-animate>For the trips<br>worth planning well.</h2>
+        <h2 data-animate>For the trips<br>worth planning well</h2>
         <p data-animate>For bigger journeys: multigenerational travel, milestone celebrations, remote destinations, anything with real complexity. We work by consultation — taking the time to understand how you travel, what matters most, and what you'd rather not think about.</p>
         <p data-animate>Every detail researched and cared for. Every moving part anticipated before it becomes a problem.</p>
-        <a href="start-planning.html" class="text-link" data-animate>Set up a discovery call &rarr;</a>
+        <div class="service-panel-ctas" data-animate>
+          <a href="start-planning.html" class="text-link">Fill out our online form &rarr;</a>
+          <a href="https://wa.me/6597514830?text=Hi%20Kristin%2C%20I%27d%20like%20to%20book%20a%20discovery%20call." class="text-link" target="_blank" rel="noopener noreferrer">Book a discovery call &rarr;</a>
+        </div>
       </div>
     </div>
 
@@ -1168,7 +1235,7 @@
   <section class="process" aria-labelledby="process-heading">
     <div class="process-inner">
       <div class="process-header" data-animate>
-        <h2 id="process-heading">How it works.</h2>
+        <h2 id="process-heading">How it works</h2>
         <p>Simple from your side.<br>That's the whole point.</p>
       </div>
       <div class="process-steps">
@@ -1227,13 +1294,13 @@
       <div class="destinations-header" data-animate>
         <div>
           <span class="eyebrow">Where will you go</span>
-          <h2 id="dest-heading">Beyond the obvious.</h2>
+          <h2 id="dest-heading">Beyond the obvious</h2>
         </div>
         <p class="destinations-aside">From Indian Ocean hideaways to the end of the earth. We go where the curious do.</p>
       </div>
       <div class="dest-grid">
         <div class="dest-card" data-animate>
-          <img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=800&q=80" alt="Maldives overwater villa and crystal lagoon" class="dest-card-img" loading="lazy" />
+          <img src="images/maldives.jpg" alt="Maldives overwater villa and crystal lagoon" class="dest-card-img" loading="lazy" />
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">Maldives</div>
@@ -1241,7 +1308,7 @@
           </div>
         </div>
         <div class="dest-card" data-animate delay-1>
-          <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=800&q=80" alt="Li River karst mountains and mist, China" class="dest-card-img" loading="lazy" />
+          <img src="images/china.jpg" alt="Great Wall of China winding through mountains" class="dest-card-img" loading="lazy" />
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">China</div>
@@ -1249,7 +1316,7 @@
           </div>
         </div>
         <div class="dest-card" data-animate delay-2>
-          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="Torres del Paine, Patagonia" class="dest-card-img" loading="lazy" />
+          <img src="images/south-america.jpg" alt="Dramatic Patagonian peaks, South America" class="dest-card-img" loading="lazy" />
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">South America</div>
@@ -1257,7 +1324,7 @@
           </div>
         </div>
         <div class="dest-card" data-animate>
-          <img src="https://images.unsplash.com/photo-1531407770524-0fa84a28af38?w=800&q=80" alt="Antarctica polar icebergs" class="dest-card-img" loading="lazy" />
+          <img src="images/antarctica.jpg" alt="Antarctica polar landscape, Detaille Island" class="dest-card-img" loading="lazy" />
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">Antarctica</div>
@@ -1265,7 +1332,7 @@
           </div>
         </div>
         <div class="dest-card" data-animate delay-1>
-          <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80" alt="African savanna at golden hour" class="dest-card-img" loading="lazy" />
+          <img src="images/safari.jpg" alt="African savanna at golden hour" class="dest-card-img" loading="lazy" />
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">Safaris</div>
@@ -1273,7 +1340,7 @@
           </div>
         </div>
         <div class="dest-card" data-animate delay-2>
-          <img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&q=80" alt="Iceland volcanic landscape" class="dest-card-img" loading="lazy" />
+          <img src="images/iceland.jpg" alt="Iceland raw volcanic landscape" class="dest-card-img" loading="lazy" />
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">Iceland</div>
@@ -1288,13 +1355,22 @@
     </div>
   </section>
 
+  <!-- BRAINSTORM STRIP -->
+  <section class="brainstorm" aria-label="Open to ideas">
+    <div class="brainstorm-inner" data-animate>
+      <p class="brainstorm-heading">No idea where you want to go next?</p>
+      <p class="brainstorm-body">No problem — we love brainstorming. Set up a discovery call and we'd be happy to share some ideas.</p>
+      <a href="https://wa.me/6597514830?text=Hi%20Kristin%2C%20I%27d%20like%20to%20book%20a%20discovery%20call." class="text-link" target="_blank" rel="noopener noreferrer">Book a discovery call &rarr;</a>
+    </div>
+  </section>
+
   <!-- LEAD CAPTURE -->
   <section class="lead" aria-labelledby="lead-heading">
     <div class="lead-bg" id="leadBg" role="img" aria-label="Amankora Gangtey Lodge, Bhutan"></div>
     <div class="lead-overlay" aria-hidden="true"></div>
     <div class="lead-content">
       <span class="eyebrow" data-animate>Let's Start Planning</span>
-      <h2 id="lead-heading" data-animate>Great travel starts with<br>the right conversation.</h2>
+      <h2 id="lead-heading" data-animate>Great travel starts with<br>the right conversation</h2>
       <p class="lead-sub" data-animate>Even a vague idea is a good place to start. Tell us where your mind keeps going; we'll help you figure out the rest.</p>
       <div class="lead-ctas" data-animate>
         <a href="start-planning.html" class="btn-gold">Start Planning</a>
@@ -1331,7 +1407,7 @@
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </a>
         </div>
-        <div class="footer-affil">Independent affiliate of Alchemist Travel &middot; Serandipians member</div>
+        <div class="footer-affil">Independent affiliate of <a href="https://www.alchemisttravel.com/" target="_blank" rel="noopener noreferrer" style="color:inherit; border-bottom:1px solid rgba(246,241,232,0.18); transition:color 0.2s ease;" onmouseover="this.style.color='#B8956A'" onmouseout="this.style.color='inherit'">Alchemist Travel</a> &middot; Serandipians member</div>
         <p class="footer-tagline">The effortless way to go further.</p>
       </div>
     </div>
