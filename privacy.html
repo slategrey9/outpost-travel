@@ -1,0 +1,617 @@
+<!-- outposttravel.co/privacy -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Outpost Travel</title>
+  <meta name="description" content="Privacy Policy for Outpost Travel. How we collect, use, and protect your personal information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+
+    /* =====================
+       DESIGN TOKENS
+    ===================== */
+    :root {
+      --cream:      #F6F1E8;
+      --cream-mid:  #EDE4D4;
+      --sand:       #DDD3BF;
+      --navy:       #1C2533;
+      --navy-mid:   #2A3347;
+      --gold:       #B8956A;
+      --gold-dark:  #a6824f;
+      --text:       #1C2533;
+      --text-mid:   #5C5248;
+      --text-light: #9C8E82;
+      --nav-h:      72px;
+    }
+
+    /* =====================
+       RESET & BASE
+    ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.15;
+      font-weight: 400;
+    }
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* =====================
+       NAV — MASTHEAD
+    ===================== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--nav-h);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 52px;
+      background-color: var(--cream);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-left a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: var(--text-mid);
+      transition: color 0.2s ease;
+    }
+    .nav-left a:hover { color: var(--gold); }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+      text-decoration: none;
+      justify-self: center;
+    }
+    .nav-logo-outpost {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      letter-spacing: 0.18em;
+      color: var(--text);
+    }
+    .nav-logo-travel {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.42rem;
+      letter-spacing: 0.44em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 28px;
+    }
+    .nav-cta {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      padding: 9px 20px;
+      border-radius: 100px;
+      background-color: var(--gold);
+      color: var(--navy);
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background-color: var(--gold-dark); }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background-color: var(--text);
+    }
+
+    /* =====================
+       MOBILE NAV
+    ===================== */
+    .mobile-nav {
+      position: fixed;
+      inset: 0;
+      background-color: var(--navy-mid);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-nav.open { opacity: 1; pointer-events: auto; }
+    .mobile-nav a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: rgba(246,241,232,0.82);
+      letter-spacing: 0.06em;
+      transition: color 0.2s ease;
+    }
+    .mobile-nav a:hover { color: var(--gold); }
+    .mobile-nav-cta {
+      margin-top: 8px;
+      background-color: var(--gold) !important;
+      color: var(--navy) !important;
+      font-family: 'Jost', sans-serif !important;
+      font-size: 0.85rem !important;
+      padding: 13px 32px;
+      border-radius: 100px;
+    }
+    .mobile-nav-close {
+      position: absolute;
+      top: 28px; right: 28px;
+      font-size: 1.2rem;
+      color: rgba(246,241,232,0.4);
+      cursor: pointer;
+      background: none; border: none;
+      transition: color 0.2s ease;
+    }
+    .mobile-nav-close:hover { color: rgba(246,241,232,0.85); }
+
+    /* =====================
+       PAGE CONTENT
+    ===================== */
+    .privacy-section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: calc(var(--nav-h) + 80px) 52px 120px;
+    }
+    .eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.63rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .privacy-section h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .privacy-last-updated {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-bottom: 56px;
+    }
+    .privacy-section h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 400;
+      color: var(--text);
+      margin-top: 52px;
+      margin-bottom: 16px;
+    }
+    .privacy-section p {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.975rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .privacy-section p:last-child { margin-bottom: 0; }
+    .privacy-section ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    .privacy-section ul li {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.975rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+    .privacy-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--gold);
+    }
+    .privacy-section a {
+      color: var(--gold);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+    .privacy-section a:hover { border-bottom-color: var(--gold); }
+    .privacy-divider {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin: 48px 0 0;
+    }
+
+    /* =====================
+       FOOTER
+    ===================== */
+    .footer {
+      background-color: var(--navy);
+      padding: 72px 52px 40px;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(246,241,232,0.07);
+    }
+    .footer-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.6rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .footer-subscribe p {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.86rem;
+      color: rgba(246,241,232,0.44);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .footer-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .footer-form input {
+      flex: 1;
+      min-width: 180px;
+      background: rgba(246,241,232,0.05);
+      border: 1px solid rgba(246,241,232,0.1);
+      border-radius: 100px;
+      padding: 11px 20px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.82rem;
+      color: var(--cream);
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .footer-form input::placeholder { color: rgba(246,241,232,0.24); }
+    .footer-form input:focus { border-color: rgba(246,241,232,0.28); }
+    .footer-form button {
+      background-color: var(--gold);
+      color: var(--navy);
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 0.76rem;
+      letter-spacing: 0.05em;
+      padding: 11px 24px;
+      border-radius: 100px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+    }
+    .footer-form button:hover { background-color: var(--gold-dark); }
+    .footer-micro {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.67rem;
+      color: rgba(246,241,232,0.2);
+    }
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-end;
+    }
+    .footer-nav-inline {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+    .footer-nav-inline a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: rgba(246,241,232,0.38);
+      transition: color 0.2s ease;
+    }
+    .footer-nav-inline a:hover { color: var(--gold); }
+    .footer-socials { display: flex; gap: 16px; align-items: center; }
+    .footer-social-link {
+      color: rgba(246,241,232,0.3);
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+    }
+    .footer-social-link:hover { color: var(--gold); }
+    .footer-affil {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      color: rgba(246,241,232,0.26);
+      text-align: right;
+      line-height: 1.7;
+    }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(246,241,232,0.28);
+    }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-bottom span,
+    .footer-bottom a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      color: rgba(246,241,232,0.2);
+    }
+    .footer-bottom a:hover { color: rgba(246,241,232,0.48); }
+
+    /* =====================
+       RESPONSIVE
+    ===================== */
+    @media (max-width: 1100px) {
+      .nav { padding: 0 36px; }
+      .privacy-section { padding: calc(var(--nav-h) + 64px) 40px 96px; }
+      .footer { padding: 64px 40px 36px; }
+    }
+    @media (max-width: 768px) {
+      .nav { padding: 0 20px; grid-template-columns: auto 1fr auto; }
+      .nav-left { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-logo { justify-self: start; }
+      .privacy-section { padding: calc(var(--nav-h) + 40px) 24px 80px; }
+      .footer { padding: 56px 20px 32px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer-info { align-items: flex-start; }
+      .footer-nav-inline { justify-content: flex-start; }
+      .footer-affil { text-align: left; }
+      .footer-bottom { flex-direction: column; gap: 6px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&#x2715;</button>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="start-planning.html" class="mobile-nav-cta">Start Planning</a>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav-left">
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="index.html" class="nav-logo" aria-label="Outpost Travel — home">
+      <span class="nav-logo-outpost">OUTPOST</span>
+      <span class="nav-logo-travel">TRAVEL</span>
+    </a>
+    <div class="nav-right">
+      <a href="start-planning.html" class="nav-cta">Start Planning</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="privacy-section">
+
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="privacy-last-updated">Last updated: April 2026</p>
+
+    <p>Outpost Travel takes your privacy seriously. This policy explains what personal information we collect, how we use it, and how we protect it. We keep it straightforward — because that's how we work.</p>
+
+    <p>Outpost Travel is operated by Kristin (Singapore), as an independent affiliate of Alchemist Travel. References to "Outpost Travel", "we", "us", or "our" in this policy refer to this business.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>What information we collect</h2>
+
+    <p>We collect personal information in the following ways:</p>
+
+    <ul>
+      <li><strong>When you contact us</strong> — via WhatsApp or email, you may share your name, contact details, travel preferences, and trip details. We collect what you choose to share.</li>
+      <li><strong>When you subscribe to our newsletter</strong> — we collect your email address.</li>
+      <li><strong>When we make bookings on your behalf</strong> — we may collect additional details (such as passport information or dietary requirements) as needed to complete your reservation. This information is shared only with the relevant hotels or suppliers.</li>
+    </ul>
+
+    <p>We do not use cookies, tracking pixels, or website analytics tools that collect personal data.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>How we use your information</h2>
+
+    <ul>
+      <li>To respond to your enquiry and provide travel planning services</li>
+      <li>To make hotel and travel bookings on your behalf</li>
+      <li>To send you travel inspiration and updates, if you have subscribed to our newsletter</li>
+      <li>To improve the service we offer over time</li>
+    </ul>
+
+    <p>We will not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>Who we share your information with</h2>
+
+    <p>To deliver our services, we may share relevant details with:</p>
+
+    <ul>
+      <li><strong>Hotels and travel suppliers</strong> — only what is required to complete a booking</li>
+      <li><strong>Alchemist Travel</strong> — our host agency, for booking fulfilment purposes</li>
+      <li><strong>Email marketing platform</strong> — if you have subscribed to our newsletter, your email address is stored with our email service provider</li>
+    </ul>
+
+    <p>All third parties we work with are required to handle your data responsibly and in accordance with applicable privacy laws.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>How long we keep your information</h2>
+
+    <p>We retain your personal information for as long as is necessary to provide our services and meet any legal obligations. If you ask us to delete your information, we will do so promptly — unless we are required by law to retain it.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>Your rights</h2>
+
+    <p>You have the right to:</p>
+
+    <ul>
+      <li>Request access to the personal information we hold about you</li>
+      <li>Ask us to correct inaccurate information</li>
+      <li>Ask us to delete your information</li>
+      <li>Withdraw consent for marketing communications at any time</li>
+    </ul>
+
+    <p>To exercise any of these rights, simply email us at <a href="mailto:hello@outposttravel.co">hello@outposttravel.co</a> and we will respond promptly.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>Data security</h2>
+
+    <p>We take reasonable precautions to protect your personal information. Communications via WhatsApp are end-to-end encrypted. We do not store sensitive information (such as payment details) ourselves.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>Applicable law</h2>
+
+    <p>This policy is governed by the Personal Data Protection Act 2012 (PDPA) of Singapore. If you are based in the European Union or United Kingdom, you may have additional rights under the GDPR or UK GDPR. We will honour those rights on request.</p>
+
+    <hr class="privacy-divider" />
+
+    <h2>Contact</h2>
+
+    <p>If you have any questions about this policy or how your data is handled, please get in touch at <a href="mailto:hello@outposttravel.co">hello@outposttravel.co</a>.</p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-subscribe">
+        <span class="footer-eyebrow">Stay Inspired</span>
+        <p>Destination guides, travel inspiration, and the occasional unmissable offer. Straight to your inbox.</p>
+        <form class="footer-form" name="newsletter" netlify netlify-honeypot="bot-field" aria-label="Newsletter signup">
+          <input type="hidden" name="form-name" value="newsletter" />
+          <input type="text" name="bot-field" style="display:none" />
+          <input type="email" name="email" placeholder="Your email address" aria-label="Email address" autocomplete="email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="footer-micro">No spam. Just good travel.</p>
+      </div>
+      <div class="footer-info">
+        <ul class="footer-nav-inline" role="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="start-planning.html">Start Planning</a></li>
+        </ul>
+        <div class="footer-socials">
+          <a href="https://wa.me/6597514830" class="footer-social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </a>
+          <a href="mailto:kristin@outposttravel.co" class="footer-social-link" aria-label="Email">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <div class="footer-affil">Independent affiliate of Alchemist Travel &middot; Serandipians member</div>
+        <p class="footer-tagline">The effortless way to go further.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Outpost Travel</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    /* MOBILE NAV */
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileNavClose = document.getElementById('mobileNavClose');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileNav.classList.add('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    });
+    function closeMobileNav() {
+      mobileNav.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    mobileNavClose.addEventListener('click', closeMobileNav);
+    mobileNav.addEventListener('click', e => { if (e.target === mobileNav) closeMobileNav(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
+  </script>
+
+</body>
+</html>
