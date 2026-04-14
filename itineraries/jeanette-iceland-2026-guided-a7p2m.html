@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Option A · The Guided Classic · Iceland Oct 2026 · Jeanette &amp; Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+
+    :root {
+      --green-deep:  #14301A;
+      --green-mid:   #1E5228;
+      --green-light: #3A8050;
+      --gold:        #C9A84C;
+      --gold-light:  #E8D5A3;
+      --cream:       #FAF8F3;
+      --warm-white:  #FFFFFF;
+      --text-dark:   #1A1A18;
+      --text-mid:    #4A4A45;
+      --text-light:  #7A7A72;
+      --border:      #E5E0D5;
+      --opt-a:       #1E6B5E;
+      --opt-a-pale:  rgba(30,107,94,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: var(--text-dark);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      transition: background 0.4s, padding 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(20,48,26,0.96);
+      padding: 14px 48px;
+      backdrop-filter: blur(8px);
+    }
+    .nav-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold-light); }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75); font-size: 0.72rem;
+      letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    /* ── HERO ── */
+    .hero {
+      height: 100vh; min-height: 680px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; position: relative; overflow: hidden;
+      background-color: var(--green-deep);
+      background-image:
+        linear-gradient(to bottom, rgba(10,28,12,0.40) 0%, rgba(10,28,12,0.78) 100%),
+        url('./images/ic-kirkjufell.jpg');
+      background-size: cover; background-position: center 55%;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 28px;
+      padding: 7px 16px;
+      border: 1px solid rgba(232,213,163,0.3);
+    }
+    .hero-tag::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%;
+      background: rgba(120,210,190,0.9);
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 300;
+      font-size: clamp(3rem, 7.4vw, 5.8rem); line-height: 1.02;
+      color: #fff; letter-spacing: 0.02em; max-width: 900px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-rule {
+      width: 40px; height: 1px; background: rgba(201,168,76,0.5);
+      margin: 36px auto;
+    }
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem; font-weight: 300; color: #fff; letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+    .hero-meta {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .hero-scroll {
+      position: absolute; bottom: 36px; left: 0; right: 0; text-align: center;
+      font-size: 0.58rem; letter-spacing: 0.26em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+    }
+    .hero-scroll::after {
+      content: ''; display: block; width: 1px; height: 24px;
+      background: rgba(201,168,76,0.4); margin: 14px auto 0;
+    }
+
+    /* ── SHARED LAYOUT ── */
+    .section { padding: 96px 48px; }
+    .section-inner { max-width: 1120px; margin: 0 auto; }
+    .eyebrow {
+      font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 400;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.12;
+      color: var(--green-deep); margin-bottom: 20px;
+    }
+    p { font-size: 0.95rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+    .divider { width: 40px; height: 1px; background: var(--gold); margin: 20px 0 32px; }
+
+    /* ── INTRO + STATS ── */
+    .intro-section { background: var(--cream); }
+    .intro-inner { max-width: 820px; }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+      margin-top: 52px;
+    }
+    .stat-block {
+      padding: 28px 22px; background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--opt-a);
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.4rem;
+      font-weight: 300; color: var(--green-deep); line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    /* ── PROPERTIES CAROUSEL ── */
+    .properties-section { background: var(--green-deep); padding: 96px 48px; }
+    .properties-section .eyebrow { color: var(--gold-light); }
+    .properties-section h2 { color: #fff; }
+    .properties-section .section-intro {
+      color: rgba(255,255,255,0.55); max-width: 640px; margin-bottom: 8px;
+    }
+
+    .carousel-wrap { position: relative; margin-top: 52px; }
+    .carousel-track {
+      display: flex; gap: 20px;
+      overflow-x: auto; scroll-snap-type: x mandatory;
+      scrollbar-width: none; -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+    .carousel-track::-webkit-scrollbar { display: none; }
+
+    .c-card {
+      flex: 0 0 280px; scroll-snap-align: start;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .c-card-img {
+      width: 100%; height: 192px; flex-shrink: 0;
+      background-size: cover; background-position: center;
+      background-color: var(--green-mid);
+      filter: contrast(1.06) saturate(1.06);
+    }
+    .c-card-body { padding: 22px 24px; flex: 1; display: flex; flex-direction: column; }
+    .c-location {
+      font-size: 0.57rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 6px;
+    }
+    .c-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400;
+      color: #fff; line-height: 1.2; margin-bottom: 5px;
+    }
+    .c-room { font-size: 0.75rem; color: rgba(255,255,255,0.42); margin-bottom: 14px; }
+    .c-nights {
+      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold-light); border: 1px solid rgba(201,168,76,0.28);
+      padding: 5px 11px; margin-top: auto; width: fit-content;
+    }
+
+    .carousel-footer {
+      display: flex; align-items: center; justify-content: flex-end;
+      margin-top: 24px; gap: 12px;
+    }
+    .c-btn {
+      width: 38px; height: 38px;
+      border: 1px solid rgba(255,255,255,0.18); background: none; cursor: pointer;
+      color: rgba(255,255,255,0.7); font-size: 0.9rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .c-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── DAY-BY-DAY ── */
+    .itin-section { background: var(--warm-white); }
+
+    .day-block {
+      display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px;
+      padding: 88px 48px; max-width: 1220px; margin: 0 auto;
+      align-items: start;
+      border-bottom: 1px solid var(--border);
+    }
+    .day-block:last-of-type { border-bottom: none; }
+    .day-block:nth-child(even) { direction: rtl; }
+    .day-block:nth-child(even) > * { direction: ltr; }
+
+    .day-text { display: flex; flex-direction: column; justify-content: flex-start; }
+    .day-ghost {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 7.5rem; font-weight: 300; line-height: 0.85;
+      color: rgba(30,107,94,0.07); margin-bottom: -14px;
+      user-select: none;
+    }
+    .day-eyebrow {
+      font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--opt-a); margin-bottom: 8px;
+    }
+    .day-date {
+      font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-light); margin-bottom: 6px;
+    }
+    .day-location {
+      font-family: 'Cormorant Garamond', serif; font-size: 2rem;
+      font-weight: 400; color: var(--green-deep); line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .day-desc {
+      font-size: 0.92rem; line-height: 1.85; color: var(--text-mid);
+      margin-bottom: 24px;
+    }
+
+    /* bullet groups */
+    .day-bullets {
+      display: flex; flex-direction: column; gap: 10px;
+      margin-bottom: 20px;
+    }
+    .day-bullet {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.82rem; line-height: 1.58; color: var(--text-mid);
+    }
+    .day-bullet .bi {
+      flex-shrink: 0; width: 16px; height: 16px;
+      margin-top: 3px;
+      color: var(--opt-a);
+    }
+    .day-bullet.meal .bi { color: #B88A3A; }
+    .day-bullet.aurora .bi { color: #5B7BB3; }
+    .day-bullet.transport .bi { color: var(--text-light); }
+    .day-bullet .bi-label {
+      font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-light); font-weight: 500;
+      display: inline-block; margin-right: 10px;
+      padding: 2px 8px;
+      background: var(--cream); border: 1px solid var(--border);
+      vertical-align: 1px;
+    }
+
+    /* optional block */
+    .day-optional {
+      margin-top: 4px; padding: 18px 22px;
+      background: var(--opt-a-pale);
+      border-left: 2px solid var(--opt-a);
+    }
+    .day-optional-title {
+      font-size: 0.56rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--opt-a); margin-bottom: 8px; font-weight: 500;
+    }
+    .day-optional p {
+      font-size: 0.82rem; line-height: 1.7; color: var(--text-mid);
+      margin-bottom: 8px;
+    }
+    .day-optional p:last-child { margin-bottom: 0; }
+
+    /* accommodation footer */
+    .day-accom {
+      margin-top: 24px; padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    }
+    .day-accom-icon {
+      width: 14px; height: 14px; color: var(--opt-a);
+      flex-shrink: 0; align-self: center;
+    }
+    .day-accom-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.12rem;
+      font-weight: 400; color: var(--green-deep);
+    }
+    .day-accom-basis {
+      font-size: 0.66rem; letter-spacing: 0.06em; color: var(--text-light);
+    }
+    .day-accom-room {
+      font-size: 0.66rem; color: var(--text-light);
+      border: 1px solid var(--border); padding: 3px 10px;
+    }
+
+    .day-imgs {
+      display: flex; flex-direction: column; gap: 16px;
+      position: sticky; top: 90px;
+    }
+    .day-img {
+      height: 290px;
+      background-size: cover; background-position: center;
+      background-color: var(--green-mid);
+      filter: contrast(1.1) saturate(1.08);
+    }
+
+    /* ── INCLUSIONS ── */
+    .incl-section { background: var(--green-deep); padding: 96px 48px; }
+    .incl-section .eyebrow { color: var(--gold-light); }
+    .incl-section h2 { color: #fff; }
+    .incl-section .divider { background: var(--gold); }
+
+    .incl-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px;
+      margin-top: 52px;
+    }
+    .incl-col h4 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.25rem;
+      font-weight: 400; color: #fff; margin-bottom: 24px;
+    }
+    .incl-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .incl-list li {
+      font-size: 0.84rem; color: rgba(255,255,255,0.62); line-height: 1.6;
+      padding-left: 22px; position: relative;
+    }
+    .incl-list li::before {
+      position: absolute; left: 0; font-size: 0.9rem;
+    }
+    .incl-list.yes li::before { content: '\2713'; color: var(--gold); }
+    .incl-list.no li::before { content: '\2013'; color: rgba(255,255,255,0.25); }
+
+    /* ── PRICING ── */
+    .pricing-section { background: var(--cream); padding: 96px 48px; text-align: center; }
+    .pricing-section .section-inner { max-width: 560px; margin: 0 auto; }
+    .price-card {
+      padding: 52px 36px; border: 1px solid var(--border); background: var(--warm-white);
+      border-top: 2px solid var(--opt-a);
+    }
+    .price-tag {
+      font-size: 0.57rem; letter-spacing: 0.22em; text-transform: uppercase;
+      padding: 5px 14px; display: inline-block; margin-bottom: 24px;
+      background: var(--opt-a-pale); color: var(--opt-a);
+    }
+    .price-amt {
+      font-family: 'Cormorant Garamond', serif; font-size: 3.2rem;
+      font-weight: 300; color: var(--green-deep); line-height: 1;
+      display: block; margin-bottom: 8px;
+    }
+    .price-from {
+      font-size: 0.72rem; color: var(--text-light); letter-spacing: 0.06em;
+      display: block; margin-bottom: 4px;
+    }
+    .price-unit { font-size: 0.78rem; color: var(--text-light); }
+    .price-total {
+      display: inline-block; margin-top: 16px;
+      font-size: 0.67rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-light); border: 1px solid var(--border); padding: 7px 18px;
+    }
+    .price-footnote {
+      display: block; margin-top: 36px;
+      font-size: 0.75rem; color: var(--text-light); font-style: italic; line-height: 1.75;
+    }
+
+    /* ── NEXT STEPS ── */
+    .next-section {
+      background: var(--green-deep); padding: 88px 48px; text-align: center; color: #fff;
+    }
+    .next-section .eyebrow { color: var(--gold-light); }
+    .next-section h2 { color: #fff; }
+    .next-section .divider { background: var(--gold); margin: 20px auto 32px; }
+    .next-section p { color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto 32px; }
+    .next-actions {
+      display: inline-flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    }
+    .next-cta {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 15px 28px; background: var(--gold); color: var(--green-deep);
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .next-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .next-cta.ghost {
+      background: transparent; color: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .next-cta.ghost:hover {
+      background: rgba(255,255,255,0.06); color: #fff;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111; padding: 36px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.38);
+    }
+    .footer-note { font-size: 0.68rem; color: rgba(255,255,255,0.22); letter-spacing: 0.06em; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      nav.scrolled { padding: 12px 24px; }
+      .nav-links { display: none; }
+      .section { padding: 64px 24px; }
+      .properties-section, .incl-section, .pricing-section, .next-section { padding: 64px 24px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .day-block {
+        grid-template-columns: 1fr; gap: 36px; padding: 64px 24px;
+      }
+      .day-block:nth-child(even) { direction: ltr; }
+      .day-imgs { position: static; }
+      .incl-grid { grid-template-columns: 1fr; gap: 40px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+    @media (max-width: 560px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .stat-block { padding: 20px 16px; }
+      .day-ghost { font-size: 5rem; }
+      .day-location { font-size: 1.55rem; }
+      .day-img { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a class="nav-back" href="./jeanette-iceland-2026-overview-n8k3w.html">
+    <span>←</span> Back to all options
+  </a>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#properties">Properties</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#inclusions">Inclusions</a>
+    <a href="#pricing">Pricing</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-tag">Option A · The Guided Classic</span>
+  <h1>Iceland's Greatest <em>Hits</em></h1>
+  <div class="hero-rule"></div>
+  <p class="hero-name">Jeanette &amp; Partner</p>
+  <p class="hero-meta">11 Nights &nbsp;·&nbsp; Flexible Thursday Departures in October 2026 &nbsp;·&nbsp; 2 Travellers</p>
+  <div class="hero-scroll">The full itinerary</div>
+</div>
+
+
+<!-- INTRO + STATS -->
+<section class="section intro-section" id="overview">
+  <div class="section-inner intro-inner">
+    <p class="eyebrow">The Journey</p>
+    <h2>The iconic sights, thoughtfully handled.</h2>
+    <div class="divider"></div>
+    <p>This is the journey for you if you'd like Iceland's most famous places handled by one of the country's most established operators. The heart of it is Nordic Visitor's 7-day Best of South &amp; West Iceland winter tour, a small group programme capped at 16 guests, covering the Golden Circle, the Snæfellsnes Peninsula, the dramatic south coast, and the glacier lagoon. Everything logistical is taken care of for you, all you need to do is show up and take it all in.</p>
+    <p>Once the tour returns to Reykjavik, we've added two extensions of our own: a semi-private Þórsmörk day trip with a maximum of four guests, and two quiet nights at Hotel Húsafell in West Iceland to round off the trip at a gentler pace. A final night at a Keflavik airport hotel makes the morning flight home that little bit easier.</p>
+
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-num">11</div>
+        <div class="stat-label">Nights</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Properties</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">16</div>
+        <div class="stat-label">Max Group Size</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Travellers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROPERTIES CAROUSEL -->
+<div class="properties-section" id="properties">
+  <div class="section-inner">
+    <p class="eyebrow">Where You'll Stay</p>
+    <h2>Seven places along the way</h2>
+    <div class="divider"></div>
+    <p class="section-intro">Your accommodation follows the shape of the trip, each property chosen to match the pace and location of the day.</p>
+
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="track-props">
+
+        <div class="c-card">
+          <div class="c-card-img" style="background-image: url('./images/ic-fosshotel.jpg');"></div>
+          <div class="c-card-body">
+            <p class="c-location">Reykjavik</p>
+            <p class="c-name">Fosshotel Reykjavík</p>
+            <p class="c-room">Standard Room</p>
+            <span class="c-nights">Night 1 &nbsp;·&nbsp; B&amp;B</span>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-card-img" style="background-image: url('./images/ic-hotel-hamar.jpg');"></div>
+          <div class="c-card-body">
+            <p class="c-location">Borgarnes &nbsp;·&nbsp; West Iceland</p>
+            <p class="c-name">Hótel Hamar</p>
+            <p class="c-room">Comfort Room</p>
+            <span class="c-nights">Night 2 &nbsp;·&nbsp; Half board</span>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-card-img" style="background-image: url('./images/ic-south-coast-hotel.jpg');"></div>
+          <div class="c-card-body">
+            <p class="c-location">Selfoss &nbsp;·&nbsp; South Iceland</p>
+            <p class="c-name">Hotel South Coast</p>
+            <p class="c-room">Standard Room</p>
+            <span class="c-nights">Night 3 &nbsp;·&nbsp; B&amp;B</span>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-card-img" style="background-image: url('./images/ic-magma-hotel.jpg');"></div>
+          <div class="c-card-body">
+            <p class="c-location">South Iceland &nbsp;·&nbsp; Glacier views</p>
+            <p class="c-name">Magma Hotel</p>
+            <p class="c-room">Deluxe Room</p>
+            <span class="c-nights">Nights 4–5 &nbsp;·&nbsp; B&amp;B</span>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-card-img" style="background-image: url('./images/ic-skuggi-1.jpg');"></div>
+          <div class="c-card-body">
+            <p class="c-location">Reykjavik</p>
+            <p class="c-name">Hótel Skuggi</p>
+            <p class="c-room">Standard Room</p>
+            <span class="c-nights">Night 6 &nbsp;·&nbsp; B&amp;B</span>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-card-img" style="background-image: url('./images/ic-ion-city.jpg');"></div>
+          <div class="c-card-body">
+            <p class="c-location">Reykjavik &nbsp;·&nbsp; Design Hotels</p>
+            <p class="c-name">ION City Hotel<sup style="color: var(--gold);">*</sup></p>
+            <p class="c-room">Standard Room</p>
+            <span class="c-nights">Nights 7–8 &nbsp;·&nbsp; Room only</span>
+          </div>
+        </div>
+
+        <div class="c-card">
+          <div class="c-card-img" style="background-image: url('./images/ic-husafell-hero.jpg');"></div>
+          <div class="c-card-body">
+            <p class="c-location">West Iceland</p>
+            <p class="c-name">Hotel Húsafell</p>
+            <p class="c-room">Double Room</p>
+            <span class="c-nights">Nights 9–10 &nbsp;·&nbsp; B&amp;B</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="carousel-footer">
+        <button class="c-btn" data-track="track-props" data-dir="-1" aria-label="Previous">&#8592;</button>
+        <button class="c-btn" data-track="track-props" data-dir="1" aria-label="Next">&#8594;</button>
+      </div>
+      <p style="margin-top: 28px; font-size: 0.78rem; line-height: 1.7; color: rgba(255,255,255,0.5); font-style: italic; max-width: 720px;"><sup style="color: var(--gold);">*</sup> If you'd prefer to minimise moving between hotels, we can extend your stay at Hótel Skuggi for Nights 7–8 instead of changing to ION City. Just let us know which you'd prefer.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- DAY-BY-DAY -->
+<section class="itin-section" id="itinerary">
+
+  <!-- Day 1: Thu 8 Oct, Arrival Reykjavik (Tour Day 1) -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">1</div>
+      <div class="day-eyebrow">Day 1 · Nordic Visitor Tour Day 1</div>
+      <div class="day-date">Thu 8 October</div>
+      <div class="day-location">Arrival &amp; Reykjavik</div>
+      <p class="day-desc">Welcome to Iceland. Your flight lands at Keflavik and a private airport transfer takes you into Reykjavik and to Fosshotel Reykjavík, the base for your first night. The afternoon is yours to settle in and explore the capital at your own pace, with the city's iconic landmarks all within walking distance: Hallgrímskirkja church, the Sólfarið Sun Voyager sculpture, and the shops and cafés of Laugavegur. Your tour begins in earnest tomorrow morning.</p>
+      <div class="day-bullets">
+        <div class="day-bullet transport">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          <span><span class="bi-label">Arrive</span>Keflavik International</span>
+        </div>
+        <div class="day-bullet transport">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span><span class="bi-label">Transfer</span>Private airport transfer to Reykjavik, approx. 45 min</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Reykjavik at your own pace, Hallgrímskirkja, Sun Voyager, Laugavegur</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Fosshotel Reykjavík</span>
+        <span class="day-accom-basis">Night 1 · B&amp;B</span>
+        <span class="day-accom-room">Standard Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-reykjavik-aerial.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-fosshotel.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 2: Fri 9 Oct, Snæfellsnes (Tour Day 2) -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">2</div>
+      <div class="day-eyebrow">Day 2 · Nordic Visitor Tour Day 2</div>
+      <div class="day-date">Fri 9 October</div>
+      <div class="day-location">Wonders of Snæfellsnes</div>
+      <p class="day-desc">The Nordic Visitor tour gets going today with a full day on the Snæfellsnes Peninsula, often called "Iceland in miniature" for the variety of landscapes packed into one small stretch of the country. You'll visit the fishing village of Arnarstapi with its dramatic coastal cliffs, the towering Lóndrangar sea stacks, the black pebbles of Djúpalónssandur beach, and the much-photographed Kirkjufell, one of the most distinctive mountains in Iceland. Evening check-in at Hótel Hamar, where the Nordic Visitor group gathers for a welcome dinner.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Snæfellsnes Peninsula &amp; Snæfellsjökull glacier views</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Arnarstapi coastal village &amp; cliffs</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Lóndrangar sea stacks &amp; Djúpalónssandur black beach</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Kirkjufell mountain &amp; waterfall</span>
+        </div>
+        <div class="day-bullet meal">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v20M8 2v7a3 3 0 0 1-5 0V2M16 11V2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3v8"/></svg>
+          <span><span class="bi-label">Meals</span> Breakfast at hotel &amp; dinner at Hótel Hamar (included)</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Hótel Hamar</span>
+        <span class="day-accom-basis">Night 2 · Half board</span>
+        <span class="day-accom-room">Comfort Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-kirkjufell.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-arnarstapi.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 3: Sat 10 Oct, Golden Circle (Tour Day 3) -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">3</div>
+      <div class="day-eyebrow">Day 3 · Nordic Visitor Tour Day 3</div>
+      <div class="day-date">Sat 10 October</div>
+      <div class="day-location">The Golden Circle &amp; Friðheimar Farm</div>
+      <p class="day-desc">Iceland's most famous route, done properly. You'll start at Þingvellir National Park (a UNESCO site and the birthplace of the world's oldest surviving parliament), where you can quite literally walk between the North American and Eurasian tectonic plates. Then on to the geothermal field at Geysir, where Strokkur erupts every few minutes, and Gullfoss, dropping in two thundering tiers into the canyon below. A stop at Friðheimar Tomato Farm follows, a working greenhouse where they grow tomatoes geothermally and bake fresh bread on site. By evening, check-in at Hotel South Coast in Selfoss.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Þingvellir National Park (UNESCO)</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Geysir Geothermal Area &amp; Strokkur</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Gullfoss Waterfall</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Friðheimar Tomato Farm &amp; Geothermal Bakery visit</span>
+        </div>
+        <div class="day-bullet meal">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v20M8 2v7a3 3 0 0 1-5 0V2M16 11V2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3v8"/></svg>
+          <span><span class="bi-label">Meals</span> Breakfast at hotel (included)</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Hotel South Coast</span>
+        <span class="day-accom-basis">Night 3 · B&amp;B</span>
+        <span class="day-accom-room">Standard Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-gullfoss.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-fridheimar.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 4: Sun 11 Oct, South Coast Waterfalls (Tour Day 4) -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">4</div>
+      <div class="day-eyebrow">Day 4 · Nordic Visitor Tour Day 4</div>
+      <div class="day-date">Sun 11 October</div>
+      <div class="day-location">South Coast Waterfalls &amp; Black Sand</div>
+      <p class="day-desc">The south coast in all its drama. You'll start the day at Seljalandsfoss, where a path behind the cascade takes you inside the waterfall itself. Then on along the Eyjafjöll mountains and past rural farmlands until you reach Reynisfjara, the famous black sand beach backed by towering basalt columns and the Reynisdrangar sea stacks rising from the sea. A seasonal ice cave experience is included on October departures, adding a genuine Iceland highlight to the day. Evening at the Magma Hotel, a wonderful small property with lakeside glacier views.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Seljalandsfoss, walk behind the falls</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Eyjafjöll mountains &amp; south coast countryside</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Reynisfjara black sand beach &amp; basalt columns</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Seasonal ice cave experience (included for October departures)</span>
+        </div>
+        <div class="day-bullet meal">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v20M8 2v7a3 3 0 0 1-5 0V2M16 11V2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3v8"/></svg>
+          <span><span class="bi-label">Meals</span> Breakfast at hotel &amp; dinner at Magma Hotel (included)</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Magma Hotel</span>
+        <span class="day-accom-basis">Night 1 of 2 · Half board</span>
+        <span class="day-accom-room">Deluxe Room · Glacier views</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-seljalandsfoss.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-reynisfjara.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 5: Mon 12 Oct, Glacier Lagoon (Tour Day 5) -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">5</div>
+      <div class="day-eyebrow">Day 5 · Nordic Visitor Tour Day 5</div>
+      <div class="day-date">Mon 12 October</div>
+      <div class="day-location">Glacier Lagoon &amp; Diamond Beach</div>
+      <p class="day-desc">One of those days that stays with you for a long time. You'll head east to Vatnajökull, Europe's largest glacier, for the drive through some of the most cinematic landscapes Iceland has to offer. The highlight is Jökulsárlón Glacier Lagoon, where huge luminous blue icebergs calve from the glacier and drift slowly toward the sea. Then Diamond Beach, just across the road, where those same icebergs wash ashore on black volcanic sand and glitter in the October light. Back to the Magma Hotel for a second night.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Vatnajökull glacier drive</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Jökulsárlón Glacier Lagoon</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Diamond Beach</span>
+        </div>
+        <div class="day-bullet meal">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v20M8 2v7a3 3 0 0 1-5 0V2M16 11V2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3v8"/></svg>
+          <span><span class="bi-label">Meals</span> Breakfast at hotel &amp; dinner at Magma Hotel (included)</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Magma Hotel</span>
+        <span class="day-accom-basis">Night 2 of 2 · Half board</span>
+        <span class="day-accom-room">Deluxe Room · Glacier views</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-diamond-beach.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-ice-cave.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 6: Tue 13 Oct, Return via South Shore (Tour Day 6) -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">6</div>
+      <div class="day-eyebrow">Day 6 · Nordic Visitor Tour Day 6</div>
+      <div class="day-date">Tue 13 October</div>
+      <div class="day-location">Return Along the South Shore</div>
+      <p class="day-desc">The return leg toward Reykjavik, with a few more stops that reward the time. Skógafoss is first, one of the tallest waterfalls in Iceland and genuinely thundering. Then the Skógar Folk Museum, a really well-curated collection of turf farmhouses, fishing boats, and tools that show centuries of hard living on this coast. Further along, a stop at the Lava Centre, where interactive exhibits make the geology of Iceland feel visceral rather than abstract. Evening check-in at Hótel Skuggi back in Reykjavik.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Skógafoss waterfall</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Skógar Folk Museum (entrance included)</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Lava Centre, Hvolsvöllur (entrance included)</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Drive through Hellisheiði plateau back to Reykjavik</span>
+        </div>
+        <div class="day-bullet meal">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v20M8 2v7a3 3 0 0 1-5 0V2M16 11V2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3v8"/></svg>
+          <span><span class="bi-label">Meals</span> Breakfast at hotel (included)</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Hótel Skuggi</span>
+        <span class="day-accom-basis">Night 6 · B&amp;B</span>
+        <span class="day-accom-room">Standard Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-skogafoss.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-magma-hotel.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 7: Wed 14 Oct, Tour Ends, ION City -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">7</div>
+      <div class="day-eyebrow">Day 7 · Tour Ends, Extensions Begin</div>
+      <div class="day-date">Wed 14 October</div>
+      <div class="day-location">Back in Reykjavik</div>
+      <p class="day-desc">The Nordic Visitor tour concludes in Reykjavik this morning. From here, you're on your own programme: a short transfer takes you to ION City Hotel, a Design Hotels property in the heart of the city and your base for the next two nights. The afternoon is free. A walk through the old town, coffee at Braud &amp; Co., a visit to Hallgrímskirkja's observation tower, or simply a quiet lunch somewhere warm. After a busy week, a slower afternoon is no bad thing.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Nordic Visitor tour concludes</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Check in at ION City Hotel &amp; free afternoon in Reykjavik</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Hallgrímskirkja, Harpa, Laugavegur, old town</span>
+        </div>
+        <div class="day-bullet meal">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v20M8 2v7a3 3 0 0 1-5 0V2M16 11V2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3v8"/></svg>
+          <span><span class="bi-label">Meals</span> Breakfast at hotel (included)</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">ION City Hotel</span>
+        <span class="day-accom-basis">Night 1 of 2 · Room only</span>
+        <span class="day-accom-room">Standard Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-ion-city.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-hallgrimskirkja.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 8: Thu 15 Oct, Semi-private Thorsmork -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">8</div>
+      <div class="day-eyebrow">Day 8 · Semi-Private Day Tour</div>
+      <div class="day-date">Thu 15 October</div>
+      <div class="day-location">Þórsmörk Super Jeep Day Trip</div>
+      <p class="day-desc">A semi-private day tour into Þórsmörk Mountain Reserve, capped at four guests in a modified Super Jeep, giving you a very different experience from the larger full-day group excursions. You'll depart Reykjavik early and head into the highland reserve via river crossings that only specialist vehicles can manage, spending most of the day in the valley. Volcanic ridgelines, wide river beds, views toward Eyjafjallajökull, and a quiet that only exists where there are no roads. Return to Reykjavik in the evening.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Semi-private Super Jeep tour, max 4 guests</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>River crossings into Þórsmörk highland reserve</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Eyjafjallajökull volcano views</span>
+        </div>
+        <div class="day-bullet transport">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span><span class="bi-label">Transfer</span> Hotel pickup and drop-off in Reykjavik, approx. 9-hour day</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">ION City Hotel</span>
+        <span class="day-accom-basis">Night 2 of 2 · Room only</span>
+        <span class="day-accom-room">Standard Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-thorsmork-summer-2.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-thorsmork-summer-3.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 9: Fri 16 Oct, Transfer to Husafell -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">9</div>
+      <div class="day-eyebrow">Day 9</div>
+      <div class="day-date">Fri 16 October</div>
+      <div class="day-location">West to Hotel Húsafell</div>
+      <p class="day-desc">Check out of ION City after a slow morning in Reykjavik, and a private transfer takes you west to Hotel Húsafell, around two hours through the lava fields. This is where the pace really drops. Húsafell sits surrounded by lava fields and glacier views in a genuinely quiet corner of West Iceland. You'll arrive in time for lunch, with the rest of the afternoon yours to settle in, enjoy the hotel's geothermal pool, or take a short walk to the Hraunfossar lava waterfalls five minutes away.</p>
+      <div class="day-bullets">
+        <div class="day-bullet transport">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span><span class="bi-label">Transfer</span> Private transfer Reykjavik to Hotel Húsafell, approx. 2 hrs</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Settle in &amp; enjoy the hotel's geothermal pool</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Short walk to Hraunfossar &amp; Barnafoss lava waterfalls</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Hotel Húsafell</span>
+        <span class="day-accom-basis">Night 1 of 2 · B&amp;B</span>
+        <span class="day-accom-room">Double Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-husafell-hero.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-husafell-aerial.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 10: Sat 17 Oct, A full day at Husafell -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">10</div>
+      <div class="day-eyebrow">Day 10</div>
+      <div class="day-date">Sat 17 October</div>
+      <div class="day-location">A Full Day at Húsafell</div>
+      <p class="day-desc">A full day at Hotel Húsafell, and genuinely no obligations. The real highlight here is the Húsafell Canyon Baths, a short walk away through the surrounding nature, a set of soaking pools built into the canyon itself using locally sourced stone with temperatures from 30 to 41°C. A guided walk takes you down past the two-tiered Langifoss waterfall first. If the baths aren't calling, the hotel's own geothermal pool is right on site and equally wonderful. And if you're feeling up to it, there are easy walks from the hotel toward the Langjökull glacier views to fill the afternoon.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Húsafell Canyon Baths, pools built into the canyon</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Guided walk to Langifoss waterfall en route to the baths</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Hotel Húsafell's own geothermal pool</span>
+        </div>
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Easy walks from the hotel toward Langjökull glacier views</span>
+        </div>
+      </div>
+      <div class="day-optional">
+        <div class="day-optional-title">Optional Add-On</div>
+        <p><strong>Into the Glacier ice cave tour.</strong> A guided expedition into a man-made tunnel carved deep inside the Langjökull ice cap, one of the more unusual experiences in Iceland. We can arrange this as a half-day add-on if you'd like.</p>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Hotel Húsafell</span>
+        <span class="day-accom-basis">Night 2 of 2 · B&amp;B</span>
+        <span class="day-accom-room">Double Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-canyon-baths-1.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-husafell-pool.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 11: Sun 18 Oct, Pre-departure transfer -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">11</div>
+      <div class="day-eyebrow">Day 11</div>
+      <div class="day-date">Sun 18 October</div>
+      <div class="day-location">Pre-Departure</div>
+      <p class="day-desc">A leisurely final morning at Hotel Húsafell, one last walk or one last dip in the pool. Around midday, a private transfer takes you south to an airport hotel near Keflavik, about two hours through the lava fields. A quiet final night, close to the terminal, so you're not rushing in the dark for an early flight the next morning.</p>
+      <div class="day-bullets">
+        <div class="day-bullet">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span>Final morning at Hotel Húsafell</span>
+        </div>
+        <div class="day-bullet transport">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span><span class="bi-label">Transfer</span> Private transfer to Keflavik airport hotel, approx. 2 hrs</span>
+        </div>
+      </div>
+      <div class="day-accom">
+        <svg class="day-accom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v13"/><path d="M3 11h18"/><path d="M7 15h2"/></svg>
+        <span class="day-accom-name">Keflavik Airport Hotel</span>
+        <span class="day-accom-basis">Night 11 · Room only</span>
+        <span class="day-accom-room">Double Room</span>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/ic-husafell-2.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-northern-lights.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 12: Mon 19 Oct, Depart -->
+  <div class="day-block">
+    <div class="day-text">
+      <div class="day-ghost">12</div>
+      <div class="day-eyebrow">Day 12</div>
+      <div class="day-date">Mon 19 October</div>
+      <div class="day-location">Homeward</div>
+      <p class="day-desc">The 11 nights are complete. Check out of the airport hotel and take the short shuttle to the terminal for your flight home. We hope you'll fly home with the vastness of the glacier, the quiet of Húsafell, and a pocket full of stories from the road.</p>
+      <div class="day-bullets">
+        <div class="day-bullet transport">
+          <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+          <span><span class="bi-label">Depart</span> International flight from Keflavik</span>
+        </div>
+      </div>
+    </div>
+    <div class="day-imgs">
+      <div class="day-img" style="background-image: url('./images/hero-northern-lights.jpg');"></div>
+      <div class="day-img" style="background-image: url('./images/ic-diamond-beach.jpg');"></div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- INCLUSIONS & EXCLUSIONS -->
+<section class="incl-section" id="inclusions">
+  <div class="section-inner">
+    <p class="eyebrow">The Details</p>
+    <h2>What's included</h2>
+    <div class="divider"></div>
+
+    <div class="incl-grid">
+      <div class="incl-col">
+        <h4>Included</h4>
+        <ul class="incl-list yes">
+          <li>11 nights accommodation as specified</li>
+          <li>Nordic Visitor 7-day "Best of South &amp; West Iceland Winter" small group tour (max 16 guests)</li>
+          <li>Private airport transfer on arrival</li>
+          <li>Breakfast daily throughout the Nordic Visitor tour (Days 2–7)</li>
+          <li>Dinner at hotel on Tour Days 2, 4 &amp; 5 (Hótel Hamar &amp; Magma Hotel)</li>
+          <li>Friðheimar Tomato Farm &amp; Geothermal Bakery visit</li>
+          <li>Seasonal ice cave experience (October departures)</li>
+          <li>Skógar Folk Museum &amp; Lava Centre entrance fees</li>
+          <li>Semi-private Þórsmörk Super Jeep day tour (max 4 guests)</li>
+          <li>2 nights at Hotel Húsafell</li>
+          <li>Húsafell Canyon Baths guided walk</li>
+        </ul>
+      </div>
+      <div class="incl-col">
+        <h4>Not Included</h4>
+        <ul class="incl-list no">
+          <li>International flights</li>
+          <li>Travel insurance</li>
+          <li>Meals not specified</li>
+          <li>Optional Blue Lagoon upgrade (with Nordic Visitor)</li>
+          <li>Optional Into the Glacier ice cave tour at Húsafell</li>
+          <li>Personal expenses and gratuities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="section-inner">
+    <p class="eyebrow" style="text-align: center;">Investment</p>
+    <h2 style="text-align: center;">Your journey, estimated</h2>
+    <div class="divider" style="margin: 20px auto 0;"></div>
+
+    <div class="price-card" style="margin-top: 48px;">
+      <span class="price-tag">Option A · Guided Classic</span>
+      <span class="price-from">from</span>
+      <span class="price-amt">SGD 8,000</span>
+      <p class="price-unit">per person</p>
+      <span class="price-total">from SGD 16,000 for 2 travellers</span>
+    </div>
+
+    <span class="price-footnote">Land only, excluding international airfare. Estimate based on current availability and exchange rates at the time of writing. Nordic Visitor tour departs every Thursday in October, so the illustrated dates (8–19 October) are one of three possible departures. Final pricing may vary by +/- SGD 500 depending on the transfers confirmed for the finalised itinerary. <strong>Pricing valid until 15 May 2026.</strong></span>
+  </div>
+</section>
+
+
+<!-- NEXT STEPS -->
+<section class="next-section">
+  <p class="eyebrow">Next Steps</p>
+  <h2>Over to you</h2>
+  <div class="divider"></div>
+  <p>Take your time with the full itinerary, and let us know any thoughts, questions, or bits you'd like to tweak. We'll check back in with you at the end of the week to see where you're leaning.</p>
+  <div class="next-actions">
+    <a class="next-cta" href="mailto:kristin@outposttravel.co?subject=Iceland%20October%202026%20%7C%20Option%20A">
+      Share your thoughts <span>→</span>
+    </a>
+    <a class="next-cta ghost" href="./jeanette-iceland-2026-overview-n8k3w.html">
+      <span>←</span> Back to all options
+    </a>
+  </div>
+  <p style="margin-top: 40px; font-size: 0.72rem; color: rgba(255,255,255,0.4); font-style: italic;">Want to read more about the Nordic Visitor tour? <a href="https://www.nordicvisitor.com/iceland/guided-small-group-tours/best-of-south-west-iceland-winter/1913/#itineraries" target="_blank" rel="noopener" style="color: var(--gold-light); text-decoration: underline;">View the operator's tour page →</a></p>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Outpost Travel</div>
+  <div class="footer-note">Prepared for Jeanette &amp; Partner &nbsp;·&nbsp; Option A &nbsp;·&nbsp; 2026</div>
+</footer>
+
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Carousel
+  function initCarousel(trackId) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    const cardWidth = () => {
+      const card = track.querySelector('.c-card');
+      return card ? card.offsetWidth + 20 : 300;
+    };
+    document.querySelectorAll(`.c-btn[data-track="${trackId}"]`).forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dir = parseInt(btn.dataset.dir);
+        track.scrollBy({ left: dir * cardWidth(), behavior: 'smooth' });
+      });
+    });
+  }
+  initCarousel('track-props');
+</script>
+
+</body>
+</html>
