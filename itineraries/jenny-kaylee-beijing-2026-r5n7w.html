@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Beijing, May 2026 · Jenny &amp; Kaylee · Alchemist Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+
+    :root {
+      --ink-deep:    #16100E;
+      --ink-mid:     #2C1C18;
+      --red-accent:  #8C2820;
+      --red-pale:    rgba(140,40,32,0.10);
+      --gold:        #C9A84C;
+      --gold-light:  #E8D5A3;
+      --cream:       #FAF8F3;
+      --warm-white:  #FFFFFF;
+      --text-dark:   #1A1A18;
+      --text-mid:    #4A4A45;
+      --text-light:  #7A7A72;
+      --border:      #E5E0D5;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: var(--text-dark);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      transition: background 0.4s, padding 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(22,16,14,0.96);
+      padding: 14px 48px;
+      backdrop-filter: blur(8px);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; letter-spacing: 0.18em; text-transform: uppercase; color: #fff;
+    }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75); font-size: 0.72rem;
+      letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    /* ── HERO ── */
+    .hero {
+      height: 100vh; min-height: 680px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; position: relative; overflow: hidden;
+      background-color: var(--ink-deep);
+      background-image:
+        linear-gradient(to bottom, rgba(16,8,6,0.22) 0%, rgba(16,8,6,0.62) 100%),
+        url('./images/bj-forbidden-city.jpg');
+      background-size: cover; background-position: center 40%;
+    }
+    .hero-proposal {
+      font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 300;
+      font-size: clamp(4rem, 9vw, 7rem); line-height: 0.95;
+      color: #fff; letter-spacing: 0.03em;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-rule {
+      width: 40px; height: 1px; background: rgba(201,168,76,0.5);
+      margin: 32px auto;
+    }
+    .hero-client-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem; font-weight: 300; color: #fff; letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+    .hero-client-meta {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .hero-brand {
+      position: absolute; bottom: 36px; left: 0; right: 0; text-align: center;
+      font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ── SHARED LAYOUT ── */
+    .section { padding: 96px 48px; }
+    .section-inner { max-width: 1120px; margin: 0 auto; }
+    .eyebrow {
+      font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif; font-weight: 400;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem); line-height: 1.12;
+      color: var(--ink-deep); margin-bottom: 20px;
+    }
+    p { font-size: 0.95rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+    .divider { width: 40px; height: 1px; background: var(--gold); margin: 20px 0 32px; }
+
+    /* ── OVERVIEW ── */
+    .overview-section { background: var(--cream); }
+    .overview-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: start; }
+    .stats { display: flex; flex-direction: column; gap: 26px; padding-top: 6px; }
+    .stat { border-left: 2px solid var(--red-accent); padding-left: 22px; }
+    .stat-n {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.2rem;
+      font-weight: 300; color: var(--ink-deep); line-height: 1; margin-bottom: 5px;
+    }
+    .stat-l { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); }
+
+    /* ── DAY SECTIONS ── */
+    #itinerary { background: var(--warm-white); }
+    .day-section { border-bottom: 1px solid var(--border); }
+    .day-section:last-child { border-bottom: none; }
+    .day-grid {
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      min-height: 560px;
+      max-width: 1280px; margin: 0 auto;
+    }
+    #itinerary .day-section:nth-child(even) > .day-grid > .day-img,
+    #itinerary .day-section:nth-child(even) > .day-grid > .day-imgs-stack { order: -1; }
+
+    .day-text {
+      padding: 88px 56px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .day-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 4.5rem;
+      font-weight: 300; color: rgba(22,16,14,0.07); line-height: 0.85; margin-bottom: -8px;
+      user-select: none;
+    }
+    .day-dest {
+      font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-top: 12px; margin-bottom: 6px;
+    }
+    .day-date {
+      font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-light); margin-bottom: 10px;
+    }
+    .day-text h3 {
+      font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400;
+      color: var(--ink-deep); line-height: 1.1; margin-bottom: 18px;
+    }
+    .day-text p { font-size: 0.92rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 14px; }
+
+    .birthday-tag {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--red-accent); background: var(--red-pale);
+      border: 1px solid rgba(140,40,32,0.25);
+      padding: 6px 14px; margin-bottom: 16px; width: fit-content;
+    }
+    .birthday-tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--red-accent); }
+
+    /* bullet groups */
+    .day-bullets { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .day-bullet {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 0.82rem; line-height: 1.58; color: var(--text-mid);
+    }
+    .day-bullet .bi {
+      flex-shrink: 0; width: 16px; height: 16px; margin-top: 3px;
+      color: var(--red-accent);
+    }
+    .day-bullet.meal .bi { color: #B88A3A; }
+    .day-bullet.transport .bi { color: var(--text-light); }
+    .day-bullet.highlight .bi { color: var(--gold); }
+    .day-bullet .bi-label {
+      font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-light); font-weight: 500;
+      display: inline-block; margin-right: 10px;
+      padding: 2px 8px;
+      background: var(--cream); border: 1px solid var(--border);
+      vertical-align: 1px;
+    }
+
+    /* optional block (default red/ticket-note) */
+    .day-optional {
+      margin-top: 20px; padding: 20px 24px;
+      background: var(--red-pale);
+      border-left: 2px solid var(--red-accent);
+    }
+    .day-optional-title {
+      font-size: 0.56rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--red-accent); margin-bottom: 10px; font-weight: 500;
+    }
+    /* optional block green variant (positive add-ons) */
+    .day-optional.green {
+      background: rgba(44,107,63,0.08);
+      border-left: 2px solid #2C6B3F;
+    }
+    .day-optional.green .day-optional-title {
+      color: #2C6B3F;
+    }
+    .day-optional.green p strong {
+      color: #2C6B3F !important;
+    }
+    .day-optional p {
+      font-size: 0.82rem; line-height: 1.7; color: var(--text-mid); margin-bottom: 8px;
+    }
+    .day-optional p:last-child { margin-bottom: 0; }
+
+    .day-img {
+      background-size: cover; background-position: center;
+      min-height: 560px;
+      filter: contrast(1.06) saturate(1.06);
+    }
+    .day-imgs-stack {
+      display: flex; flex-direction: column;
+      min-height: 560px;
+    }
+    .day-imgs-stack .day-img {
+      flex: 1; min-height: 0;
+    }
+    .day-imgs-stack .day-img + .day-img {
+      border-top: 4px solid var(--warm-white);
+    }
+
+    /* ── GUIDE BIO ── */
+    .guide-section { background: var(--ink-deep); color: #fff; padding: 96px 48px; }
+    .guide-section .eyebrow { color: var(--gold-light); }
+    .guide-section h2 { color: #fff; }
+    .guide-section .divider { background: var(--gold); }
+    .guide-inner { max-width: 780px; margin: 0 auto; }
+    .guide-card {
+      margin-top: 48px; padding: 40px 44px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 3px solid var(--gold);
+    }
+    .guide-name {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 400;
+      color: #fff; margin-bottom: 6px; line-height: 1.1;
+    }
+    .guide-role {
+      font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 24px;
+    }
+    .guide-card p {
+      font-size: 0.9rem; line-height: 1.85; color: rgba(255,255,255,0.72);
+      margin-bottom: 14px; font-style: italic;
+    }
+    .guide-card p:last-child { margin-bottom: 0; }
+    .guide-attribution {
+      margin-top: 18px; font-size: 0.72rem; color: rgba(255,255,255,0.4);
+      font-style: normal !important; letter-spacing: 0.03em;
+    }
+
+    /* ── INCLUSIONS ── */
+    .inc-section { background: var(--cream); padding: 96px 48px; }
+    .inc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 48px; }
+    .inc-col h4 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.22rem; font-weight: 400;
+      color: var(--ink-deep); margin-bottom: 22px;
+    }
+    .inc-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .inc-list li {
+      display: flex; gap: 14px;
+      font-size: 0.86rem; color: var(--text-mid); line-height: 1.62;
+    }
+    .yes { color: var(--gold); flex-shrink: 0; font-size: 0.8rem; padding-top: 2px; }
+    .no  { color: var(--text-light); flex-shrink: 0; font-size: 0.8rem; padding-top: 2px; }
+
+    /* ── PRICING ── */
+    .pricing-section { background: var(--ink-deep); padding: 96px 48px; color: #fff; }
+    .pricing-section .eyebrow { color: var(--gold-light); }
+    .pricing-section h2 { color: #fff; }
+    .pricing-section .divider { background: var(--gold); margin-left: auto; margin-right: auto; }
+    .pricing-inner { max-width: 980px; margin: 0 auto; text-align: center; }
+    .pricing-intro { color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto 12px; }
+
+    .price-grid {
+      display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 20px;
+      margin-top: 48px;
+    }
+    .price-card {
+      padding: 44px 32px; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      text-align: left;
+    }
+    .price-card.featured {
+      border-top: 2px solid var(--gold);
+      background: rgba(201,168,76,0.06);
+    }
+    .price-tag {
+      font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase;
+      padding: 5px 12px; display: inline-block; margin-bottom: 20px;
+      background: rgba(201,168,76,0.15); color: var(--gold-light);
+    }
+    .price-card h3 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+      font-weight: 400; color: #fff; margin-bottom: 6px; line-height: 1.2;
+    }
+    .price-sub {
+      font-size: 0.7rem; color: rgba(255,255,255,0.42);
+      margin-bottom: 22px;
+    }
+    .price-from {
+      font-size: 0.66rem; color: rgba(255,255,255,0.5); letter-spacing: 0.06em;
+      display: block; margin-bottom: 2px;
+    }
+    .price-amt {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.6rem;
+      font-weight: 300; color: #fff; line-height: 1;
+      display: block; margin-bottom: 6px;
+    }
+    .price-unit {
+      font-size: 0.72rem; color: rgba(255,255,255,0.45);
+      letter-spacing: 0.03em; display: block; margin-bottom: 18px;
+    }
+    .price-variants {
+      display: flex; flex-direction: column; gap: 10px;
+      margin-top: 14px; padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .price-variant {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 0.78rem; color: rgba(255,255,255,0.7);
+    }
+    .price-variant strong {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;
+      font-weight: 400; color: #fff;
+    }
+    .price-variant-label {
+      font-size: 0.74rem; color: rgba(255,255,255,0.55);
+    }
+    .price-alt-note {
+      margin-top: 40px; padding: 24px 28px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.84rem; line-height: 1.72; color: rgba(255,255,255,0.65);
+      text-align: left;
+    }
+    .price-alt-note strong { color: #fff; font-weight: 500; }
+    .price-footnote {
+      display: block; margin-top: 36px;
+      font-size: 0.72rem; color: rgba(255,255,255,0.42); font-style: italic; line-height: 1.75;
+    }
+    .price-footnote strong { color: rgba(255,255,255,0.7); font-style: normal; }
+
+    /* ── NEXT STEPS ── */
+    .next-section {
+      background: var(--warm-white); padding: 88px 48px; text-align: center;
+    }
+    .next-inner { max-width: 600px; margin: 0 auto; }
+    .next-section .divider { background: var(--gold); margin: 20px auto 32px; }
+    .next-section p { color: var(--text-mid); margin: 0 auto 32px; }
+    .next-cta {
+      display: inline-flex; align-items: center; gap: 12px;
+      padding: 15px 28px; background: var(--ink-deep); color: #fff;
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      font-weight: 500;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .next-cta:hover { background: var(--red-accent); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111; padding: 36px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.38);
+    }
+    .footer-note { font-size: 0.68rem; color: rgba(255,255,255,0.22); letter-spacing: 0.06em; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .section, .guide-section, .inc-section, .pricing-section, .next-section { padding: 64px 24px; }
+      .overview-grid { grid-template-columns: 1fr; gap: 40px; }
+      .day-grid { grid-template-columns: 1fr; }
+      #itinerary .day-section:nth-child(even) > .day-grid > .day-img,
+      #itinerary .day-section:nth-child(even) > .day-grid > .day-imgs-stack { order: 0; }
+      .day-img { min-height: 300px; order: -1; }
+      .day-imgs-stack { min-height: 0; order: -1; }
+      .day-imgs-stack .day-img { min-height: 240px; }
+      .day-text { padding: 56px 24px; }
+      .inc-grid { grid-template-columns: 1fr; gap: 40px; }
+      .price-grid { grid-template-columns: 1fr; }
+      .guide-card { padding: 32px 28px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+    @media (max-width: 560px) {
+      .day-num { font-size: 3.2rem; }
+      .day-text h3 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-logo">Alchemist Travel</div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#guide">Your Guide</a>
+    <a href="#inclusions">Inclusions</a>
+    <a href="#pricing">Pricing</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-proposal">Beijing &nbsp;·&nbsp; Private Tour Proposal</p>
+  <h1>Beijing, <em>Unhurried</em></h1>
+  <div class="hero-rule"></div>
+  <p class="hero-client-name">Jenny &amp; Kaylee</p>
+  <p class="hero-client-meta">30 May – 2 June 2026 &nbsp;·&nbsp; 4 Days &nbsp;·&nbsp; Private Tours for 2</p>
+  <div class="hero-brand">Alchemist Travel &nbsp;·&nbsp; kristin@alchemisttravel.com</div>
+</div>
+
+
+<!-- TRIP OVERVIEW -->
+<section class="section overview-section" id="overview">
+  <div class="section-inner">
+    <div class="overview-grid">
+      <div>
+        <p class="eyebrow">The Journey</p>
+        <h2>Four days in the imperial capital.</h2>
+        <div class="divider"></div>
+        <p>Fresh from the Buddhist quiet of Wutaishan, Beijing arrives as something quite different: monumental, layered, and deeply alive. We've shaped this around the places that matter for a first trip to the city and offer new insight for the returning traveller, with a guide we've specially sourced for her own long Buddhist practice and her knowledge of the temples you'll visit together. We think you'll find her a wonderful match for the pilgrimage you've just completed.</p>
+        <p>Day one is yours to settle in at your own pace. Day two moves gently between the Lama Temple and the Forbidden City with your specialist guide, and happens to fall on Jenny's birthday, which we'd be delighted to help you mark. Day three takes you out to Jinshanling for one of the most beautiful sections of the Great Wall within reach of the capital. Day four is the flight home. All touring is fully private, with a dedicated guide, driver and vehicle just for the two of you.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-n">4</div>
+          <div class="stat-l">Days in Beijing</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">2</div>
+          <div class="stat-l">Days of private guided touring</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">2</div>
+          <div class="stat-l">UNESCO World Heritage sites</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">31 May</div>
+          <div class="stat-l">Jenny's birthday, celebrated in Beijing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DAY SECTIONS -->
+<div id="itinerary">
+
+  <!-- Day 1: Arrival -->
+  <div class="day-section">
+    <div class="day-grid">
+      <div class="day-text">
+        <div class="day-num">01</div>
+        <p class="day-dest">Beijing</p>
+        <p class="day-date">Saturday, 30 May 2026</p>
+        <h3>Arrival in Beijing</h3>
+        <p>Your flight brings you into the capital after the pilgrimage at Wutaishan. Today is yours to settle in at your own pace, however feels right after the journey. Your guide will meet you tomorrow morning to begin the four days together.</p>
+        <div class="day-bullets">
+          <div class="day-bullet transport">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            <span><span class="bi-label">Arrive</span> Beijing Capital International (PEK)</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>A slow first day to settle in</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>Your guide meets you tomorrow morning at 9:00 AM</span>
+          </div>
+        </div>
+      </div>
+      <div class="day-img" style="background-image: url('./images/bj-hall-supreme-harmony.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 2: Lama Temple + Forbidden City -->
+  <div class="day-section">
+    <div class="day-grid">
+      <div class="day-text">
+        <div class="day-num">02</div>
+        <p class="day-dest">Lama Temple &amp; Forbidden City</p>
+        <p class="day-date">Sunday, 31 May 2026</p>
+        <div class="birthday-tag">Jenny's Birthday</div>
+        <h3>Lama Temple &amp; the Forbidden City</h3>
+        <p>A quick word on today's guide first. We've specially sourced Daisy for this trip, and we think she'll feel like the right match for Jenny and Kaylee after Wutaishan. Her own long practice of Mahayana Buddhism and her knowledge of Chinese history will bring both of today's sites to life, particularly the Lama Temple. There's more on her background further down the page.</p>
+        <p>The morning is spent at the Lama Temple, also known as Yonghegong. With its sloping orange-tiled eaves juxtaposed against an elevated ring road in central Beijing, Yonghegong has been at the heart of Tibetan Buddhism in the capital for over three centuries. You'll navigate through drifting incense smoke and past the quiet prayer halls toward the Hall of Boundless Happiness, home to a 26-metre Maitreya Buddha carved from a single piece of white sandalwood, which holds a Guinness World Record of its own.</p>
+        <p>After lunch, step inside the Forbidden City, the massive imperial palace that was once home to China's emperors. Its gates remained closed to all but the royal household for nearly 600 years, until 1924, when a warlord expelled the last emperor and the site was finally opened to the world. From the Meridian Gate through the three great halls and beyond, Daisy will give you an insider's tour at an unhurried pace. Time permitting, a short stroll through the nearby hutong lanes before the day ends at around 5:00 PM.</p>
+        <div class="day-bullets">
+          <div class="day-bullet transport">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span><span class="bi-label">Pickup</span> 9:00 AM, private vehicle with your guide</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>Lama Temple (Yonghegong), led by a specialist Buddhist guide</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>The Forbidden City with pre-booked timed entry</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>Stroll through the nearby hutong lanes, time permitting</span>
+          </div>
+          <div class="day-bullet meal">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v20M8 2v7a3 3 0 0 1-5 0V2M16 11V2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3v8"/></svg>
+            <span><span class="bi-label">Dinner</span> Optional birthday vegetarian feast at King's Joy, a Michelin-starred vegetarian restaurant near the Lama Temple (arranged on request, additional cost)</span>
+          </div>
+        </div>
+        <div class="day-optional">
+          <div class="day-optional-title">Please Note · Forbidden City Tickets</div>
+          <p>Entry to the Forbidden City is released on a strict daily quota and often sells out well in advance. Once we confirm the trip and hold your timed entry slot, the date and running order of Day 2 can't be shifted, so as soon as your dates are firm, just let us know and we'll lock everything in right away.</p>
+        </div>
+      </div>
+      <div class="day-imgs-stack">
+        <div class="day-img" style="background-image: url('./images/bj-yonghe-1.jpg');"></div>
+        <div class="day-img" style="background-image: url('./images/bj-yonghe-2.jpg');"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 3: Jinshanling Great Wall -->
+  <div class="day-section">
+    <div class="day-grid">
+      <div class="day-text">
+        <div class="day-num">03</div>
+        <p class="day-dest">Jinshanling Great Wall</p>
+        <p class="day-date">Monday, 1 June 2026</p>
+        <h3>The Great Wall at Jinshanling</h3>
+        <p>Rising from the sea in the east before extending 5,000 miles to the deserts of China's far west, the Great Wall is arguably the greatest man-made wonder on earth. For your hike today, we bypass the more touristy sections and take you straight to the stunning Ming Dynasty ruins outside Beijing, where lonely guards far from home once kept a weary watch over the barbarian lands beyond.</p>
+        <p>Two and a half hours from Beijing, in the rugged mountains of Hebei Province, lies one of the most picturesque sections of the Wall within reach of the capital. Free from the crowds of its closer neighbours, Jinshanling's 10.5-kilometre stretch of both restored and wild wall is steeped in centuries of history. A short gondola ride up the mountain, followed by a three-hour hike, opens onto an unbelievable view of countless watchtowers stacked against endless mountain silhouettes, and a window into the minds of those ancient soldiers who once shared this view many hundreds of years before.</p>
+        <div class="day-bullets">
+          <div class="day-bullet transport">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span><span class="bi-label">Pickup</span> 9:00 AM, private vehicle with your guide</span>
+          </div>
+          <div class="day-bullet transport">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span><span class="bi-label">Drive</span> Approximately 2.5 hours to Jinshanling (~130 km)</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>Gondola ride up the mountain to the wall</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>Three-hour guided hike along a 10.5 km stretch of restored and wild wall</span>
+          </div>
+          <div class="day-bullet">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span>Entry tickets and gondola included</span>
+          </div>
+          <div class="day-bullet transport">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span><span class="bi-label">Return</span> Back in Beijing by around 5:00 PM</span>
+          </div>
+        </div>
+        <div class="day-optional green">
+          <div class="day-optional-title">Optional Add-On &nbsp;·&nbsp; Tai Chi on the Great Wall</div>
+          <p>If you'd like a moment of stillness to balance the hike, we can arrange a private Tai Chi session on the wall with Master Eric Liu. Eric is the founder of the Beijing Sanfeng Tai Chi Club, a seventh-generation heir of the Imperial Yang-style tradition (Lao Liu Lu), a member of the Chinese Wushu Association, and the resident Tai Chi Master at Mandarin Oriental Qianmen, Beijing.</p>
+          <p>Eric's focus is on song gong, the gentler "relaxation" qigong that draws on the Book of Changes and the Tao Te Ching. As he puts it: "Tai Chi lies in everywhere of our lives. Softness, balance and effortless yielding are the dominant power, not force or extremity." A short session on the wall, held before or after the hike, is a lovely way to bring the day into focus.</p>
+          <p style="margin-top: 10px; font-size: 0.76rem; color: var(--text-light);"><strong>Additional cost:</strong> approx. SGD 400, subject to Master Liu's availability.</p>
+        </div>
+      </div>
+      <div class="day-img" style="background-image: url('./images/bj-jinshanling.jpg');"></div>
+    </div>
+  </div>
+
+  <!-- Day 4: Departure -->
+  <div class="day-section">
+    <div class="day-grid">
+      <div class="day-text">
+        <div class="day-num">04</div>
+        <p class="day-dest">Departure</p>
+        <p class="day-date">Tuesday, 2 June 2026</p>
+        <h3>Homeward</h3>
+        <p>The four days are complete. We hope the blend of sacred quiet at the Lama Temple, the sweep of the Forbidden City, and the long views from Jinshanling gives you a few good stories to carry back with you, alongside everything you've brought with you from Wutaishan.</p>
+        <div class="day-bullets">
+          <div class="day-bullet transport">
+            <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+            <span><span class="bi-label">Depart</span> International flight home to Singapore</span>
+          </div>
+        </div>
+      </div>
+      <div class="day-img" style="background-image: url('./images/bj-wc-3.jpg');"></div>
+    </div>
+  </div>
+
+</div><!-- /#itinerary -->
+
+
+<!-- YOUR GUIDE -->
+<section class="guide-section" id="guide">
+  <div class="guide-inner">
+    <p class="eyebrow">Your Guide</p>
+    <h2>Meet Daisy</h2>
+    <div class="divider"></div>
+    <p style="color: rgba(255,255,255,0.6);">We've specially sourced a guide for this trip whose own Buddhist practice and deep knowledge of Chinese history felt like the right fit after the pilgrimage you've just completed at Wutaishan. Daisy will accompany you across both touring days, and will bring to life the Buddhist features and history of each site with the insight of someone who knows them from both an expert's and a practitioner's lens.</p>
+
+    <div class="guide-card">
+      <p class="guide-name" style="font-style: normal;">Daisy Zuo</p>
+      <p class="guide-role" style="font-style: normal;">Beijing Guide · Buddhist Specialist</p>
+      <p>"I am a devoted Buddhist. I have been studying the Dharma for many years, following Master Ti Fo of the Huayan (Avatamsaka) school. I study Mahayana Buddhism.</p>
+      <p>Last year, I completed two important pilgrimages: the circumambulation of Mount Kailash in Tibet, and the Great Pilgrimage around the Five Terraces of Mount Wutai. These experiences deepened my understanding and practice of the Dharma.</p>
+      <p>Buddhism teaches me compassion, wisdom, and inner peace. It helps me see the goodness in people and stay mindful in daily life.</p>
+      <p>As your guide, I would be happy to share not only the beautiful places we visit, but also a little of the peace and inspiration I have found on my spiritual path. Thank you for allowing me to accompany you on this journey."</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- INCLUSIONS & EXCLUSIONS -->
+<section class="inc-section" id="inclusions">
+  <div class="section-inner">
+    <p class="eyebrow">The Details</p>
+    <h2>What's included</h2>
+    <div class="divider"></div>
+    <div class="inc-grid">
+      <div class="inc-col">
+        <h4>Included</h4>
+        <ul class="inc-list">
+          <li><span class="yes">✓</span><span>Private English-speaking guide on Days 2 and 3, with specialist Buddhist knowledge for the temple visit</span></li>
+          <li><span class="yes">✓</span><span>Private vehicle and driver for all guided touring (7-seat Buick GL8)</span></li>
+          <li><span class="yes">✓</span><span>In-transport refreshments</span></li>
+          <li><span class="yes">✓</span><span>Pre-booked entry tickets: Lama Temple, Forbidden City, Jinshanling Great Wall</span></li>
+          <li><span class="yes">✓</span><span>Exclusive vehicle access at Jinshanling, bypassing the public shuttle and queues</span></li>
+          <li><span class="yes">✓</span><span>All taxes (6.72% VAT)</span></li>
+        </ul>
+      </div>
+      <div class="inc-col">
+        <h4>Not Included</h4>
+        <ul class="inc-list">
+          <li><span class="no">–</span><span>International flights to and from Beijing</span></li>
+          <li><span class="no">–</span><span>Accommodation (staying with family friend)</span></li>
+          <li><span class="no">–</span><span>Meals and alcohol (restaurant bookings can be arranged on request)</span></li>
+          <li><span class="no">–</span><span>Chinese tourist visa</span></li>
+          <li><span class="no">–</span><span>Travel and medical insurance</span></li>
+          <li><span class="no">–</span><span>Airport transfers (available as an optional add-on, see pricing)</span></li>
+          <li><span class="no">–</span><span>Optional Tai Chi experience with Master Eric Liu at Jinshanling</span></li>
+          <li><span class="no">–</span><span>Guide and driver gratuities (recommended USD 15–30 per person per day)</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-inner">
+    <p class="eyebrow" style="text-align: center;">Investment</p>
+    <h2 style="text-align: center;">Your journey, priced</h2>
+    <div class="divider"></div>
+    <p class="pricing-intro">The specialist Buddhist-guided tour as the main offering, with two optional add-ons alongside: a private Tai Chi session at Jinshanling, and airport transfers if you'd like us to handle those too.</p>
+
+    <div class="price-grid">
+
+      <div class="price-card featured">
+        <span class="price-tag">Specialist Buddhist Guide</span>
+        <h3>The Four-Day Tour</h3>
+        <p class="price-sub">Daisy accompanies you across both touring days</p>
+        <span class="price-from">from</span>
+        <span class="price-amt">SGD 3,950</span>
+        <span class="price-unit">for 2 travellers</span>
+        <div class="price-variants">
+          <div class="price-variant">
+            <span class="price-variant-label">Day 2 · Lama Temple &amp; Forbidden City</span>
+          </div>
+          <div class="price-variant">
+            <span class="price-variant-label">Day 3 · Jinshanling Great Wall hike</span>
+          </div>
+          <div class="price-variant">
+            <span class="price-variant-label">Private vehicle, guide, entries &amp; taxes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-tag">Optional Add-On</span>
+        <h3>Tai Chi on the Great Wall</h3>
+        <p class="price-sub">Private session with Master Eric Liu at Jinshanling</p>
+        <span class="price-from">approx.</span>
+        <span class="price-amt">+SGD 400</span>
+        <span class="price-unit">total</span>
+        <div class="price-variants">
+          <div class="price-variant">
+            <span class="price-variant-label">A short private session before or after the Day 3 hike</span>
+          </div>
+          <div class="price-variant">
+            <span class="price-variant-label">Subject to Master Liu's availability on the day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-tag">Optional Add-On</span>
+        <h3>Airport Transfers</h3>
+        <p class="price-sub">Private arrival and departure transfers</p>
+        <span class="price-from">+</span>
+        <span class="price-amt">SGD 200</span>
+        <span class="price-unit">round trip, total</span>
+        <div class="price-variants">
+          <div class="price-variant">
+            <span class="price-variant-label">Day 1 · Beijing Capital (PEK) to your pick-up point</span>
+          </div>
+          <div class="price-variant">
+            <span class="price-variant-label">Day 4 · Pick-up point to Beijing Capital (PEK)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="price-alt-note">
+      <strong>A lighter alternative.</strong> If the Buddhist-specialist guide isn't a priority, we can arrange the same four-day tour with a standard English-speaking guide for a flat <strong>SGD 1,900 all-in for 2 travellers</strong>, including airport transfers. You'd still get the Lama Temple, the Forbidden City, and the Jinshanling hike, but without the specialist Buddhism knowledge. Happy to talk through the difference if useful.
+    </div>
+
+    <span class="price-footnote">All pricing in Singapore Dollars, based on 2 travellers sharing. Excludes international flights, accommodation, meals, visa, insurance, and personal expenses.</span>
+  </div>
+</section>
+
+
+<!-- NEXT STEPS -->
+<section class="next-section">
+  <div class="next-inner">
+    <p class="eyebrow">Next Steps</p>
+    <h2>Over to you</h2>
+    <div class="divider"></div>
+    <p>Have a read through at your own pace and let us know what you think, along with any thoughts on the optional Tai Chi session or the airport transfers. As soon as we have the green light, we'll lock in your Forbidden City slot and get everything confirmed.</p>
+    <a class="next-cta" href="mailto:kristin@alchemisttravel.com?subject=Beijing%20May%202026%20%7C%20Jenny%20%26%20Kaylee">
+      Share your thoughts <span>→</span>
+    </a>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Alchemist Travel</div>
+  <div class="footer-note">Prepared for Jenny &amp; Kaylee &nbsp;·&nbsp; May 2026</div>
+</footer>
+
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+</script>
+
+</body>
+</html>
