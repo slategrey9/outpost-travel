@@ -255,11 +255,10 @@
     .context-panel-bg {
       position: absolute;
       inset: 0;
-      background-image: url('images/start-planning-context.jpg');
+      background-image: url('images/amankora-gangtey-lodge.jpg');
       background-size: cover;
       background-position: center;
       opacity: 0.18;
-      transform: scale(1.15);
     }
     .context-content {
       position: relative;
@@ -404,12 +403,6 @@
       font-size: 0.76rem;
       letter-spacing: 0.05em;
       color: var(--text-mid);
-    }
-    .req-mark {
-      color: var(--gold);
-      margin-left: 3px;
-      font-weight: 400;
-      font-size: 0.9em;
     }
     .field-group .field-hint {
       font-family: 'Jost', sans-serif;
@@ -615,21 +608,6 @@
       transition: color 0.2s ease;
     }
     .footer-nav-inline a:hover { color: var(--gold); }
-    .footer-right-stack {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 12px;
-    }
-    .footer-email {
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 0.84rem;
-      letter-spacing: 0.02em;
-      color: rgba(246,241,232,0.55);
-      transition: color 0.2s ease;
-    }
-    .footer-email:hover { color: var(--gold); }
     .footer-bottom {
       max-width: 1100px;
       margin: 0 auto;
@@ -727,7 +705,7 @@
       <div class="context-content">
         <span class="eyebrow">Start Planning</span>
         <h1>Tell us where<br>your mind keeps<br>going.</h1>
-        <p>A few details is all we need. We'll come back to you with a clear recommendation, not an overwhelming list of options.</p>
+        <p>A few details is all we need to get started. We'll come back to you with a clear recommendation, not an overwhelming list of options.</p>
       </div>
       <div class="context-footer">
         <div class="context-reassurance">
@@ -737,7 +715,7 @@
           </div>
           <div class="reassurance-item">
             <span class="reassurance-dot"></span>
-            <p>We respond within 24 hours, usually much sooner.</p>
+            <p>We respond within one business day, usually much sooner.</p>
           </div>
           <div class="reassurance-item">
             <span class="reassurance-dot"></span>
@@ -754,7 +732,7 @@
       <div class="form-success" id="formSuccess" role="status" aria-live="polite">
         <span class="success-rule" aria-hidden="true"></span>
         <h2>We'll be in touch.</h2>
-        <p>Thank you for reaching out. Kristin will get back to you within 24 hours to talk through your trip.</p>
+        <p>Thank you for reaching out. Kristin will get back to you within one business day to talk through your trip.</p>
         <p>In the meantime, feel free to message on WhatsApp if you'd prefer a faster response.</p>
         <a href="https://wa.me/6597514830" class="wa-link" target="_blank" rel="noopener noreferrer">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
@@ -778,7 +756,7 @@
         <!-- SERVICE TYPE -->
         <fieldset style="border:none; padding:0; margin-bottom: 0;">
           <legend style="font-family:'Jost',sans-serif; font-weight:400; font-size:0.76rem; letter-spacing:0.05em; color:var(--text-mid); margin-bottom:16px;">
-            What can we help with?<span class="req-mark" aria-hidden="true">*</span>
+            What can we help with?
           </legend>
           <div class="service-select" role="radiogroup" aria-label="Select service type">
             <div class="service-option">
@@ -815,7 +793,7 @@
         <div class="form-section" id="section-hotel" aria-label="Hotel booking details">
           <div class="field-group" data-animate>
             <label for="hotel-destination">Where are you thinking of going?</label>
-            <span class="field-hint">A specific destination, a region, or "open to ideas". All fine.</span>
+            <span class="field-hint">A specific destination, a region, or "open to ideas" — all fine.</span>
             <input
               type="text"
               id="hotel-destination"
@@ -854,7 +832,7 @@
                 </select>
                 <select id="hotel-budget" name="budget_per_room_night">
                   <option value="" disabled selected></option>
-                  <option>$150 – $300</option>
+                  <option>Under $300</option>
                   <option>$300 – $600</option>
                   <option>$600 – $1,000</option>
                   <option>$1,000 – $2,000</option>
@@ -879,7 +857,7 @@
         <div class="form-section" id="section-trip" aria-label="Trip planning details">
           <div class="field-group" data-animate>
             <label for="trip-destination">Where are you thinking of going?</label>
-            <span class="field-hint">A specific destination, a region, or "open to ideas". All fine.</span>
+            <span class="field-hint">A specific destination, a region, or "open to ideas" — all fine.</span>
             <input
               type="text"
               id="trip-destination"
@@ -925,21 +903,15 @@
               </select>
             </div>
             <div class="field-group">
-              <label for="trip-budget">Budget per person per day</label>
-              <div class="field-row-currency">
-                <select id="trip-currency" name="trip_budget_currency" aria-label="Currency">
-                  <option value="USD" selected>USD</option>
-                  <option value="SGD">SGD</option>
-                </select>
-                <select id="trip-budget" name="budget_per_day">
-                  <option value="" disabled selected></option>
-                  <option>$300 – $500</option>
-                  <option>$500 – $800</option>
-                  <option>$800 – $1,500</option>
-                  <option>$1,500+</option>
-                  <option>Not sure yet</option>
-                </select>
-              </div>
+              <label for="trip-budget">Budget per person per day (USD)</label>
+              <select id="trip-budget" name="budget_per_day">
+                <option value="" disabled selected></option>
+                <option>$300 – $500</option>
+                <option>$500 – $800</option>
+                <option>$800 – $1,500</option>
+                <option>$1,500+</option>
+                <option>Not sure yet</option>
+              </select>
             </div>
           </div>
           <div class="field-group" data-animate delay-2>
@@ -973,7 +945,7 @@
           <p class="common-fields-heading">Your details</p>
           <div class="field-row" data-animate>
             <div class="field-group">
-              <label for="contact-name">Name<span class="req-mark" aria-hidden="true">*</span></label>
+              <label for="contact-name">Name</label>
               <input
                 type="text"
                 id="contact-name"
@@ -984,7 +956,7 @@
               />
             </div>
             <div class="field-group">
-              <label for="contact-email">Email<span class="req-mark" aria-hidden="true">*</span></label>
+              <label for="contact-email">Email</label>
               <input
                 type="email"
                 id="contact-email"
@@ -996,7 +968,7 @@
             </div>
           </div>
           <div class="field-group" data-animate delay-1>
-            <label for="contact-whatsapp">WhatsApp number</label>
+            <label for="contact-whatsapp">WhatsApp number <span style="color:var(--text-light); font-weight:300;">(optional)</span></label>
             <span class="field-hint">Easier for quick back-and-forth. Include country code.</span>
             <input
               type="tel"
@@ -1019,7 +991,7 @@
       <div class="wa-aside" id="waAside">
         <p>Prefer a quicker conversation?</p>
         <a
-          href="https://wa.me/6597514830?text=Hi%20Outpost%20Travel%2C%20here%27s%20the%20trip%20I%27m%20looking%20to%20plan%3A%20"
+          href="https://wa.me/6597514830?text=Hi%20Kristin%2C%20I%20came%20across%20Outpost%20Travel%20and%20here%27s%20what%20I%27m%20thinking%20about%20for%20my%20next%20trip%3A%20"
           class="wa-link"
           target="_blank"
           rel="noopener noreferrer"
@@ -1035,14 +1007,11 @@
     <footer class="footer" role="contentinfo">
       <div class="footer-inner">
         <p class="footer-tagline">The effortless way to go further.</p>
-        <div class="footer-right-stack">
-          <ul class="footer-nav-inline" role="list">
-            <li><a href="about.html">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-          </ul>
-          <a href="mailto:hello@outposttravel.co" class="footer-email">hello@outposttravel.co</a>
-        </div>
+        <ul class="footer-nav-inline" role="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Outpost Travel</span>

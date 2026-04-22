@@ -304,9 +304,9 @@
     .hero-bg {
       position: absolute;
       inset: -12% 0;
-      background-image: url('images/capella-lord-howe-hero.jpg');
+      background-image: url('images/hero.jpg');
       background-size: cover;
-      background-position: center 50%;
+      background-position: center 25%;
       will-change: transform;
     }
     .hero-overlay {
@@ -425,15 +425,6 @@
       line-height: 1.85;
       margin-bottom: 16px;
     }
-    .reframe-inner .reframe-anchor {
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid var(--sand);
-      font-size: 0.78rem;
-      letter-spacing: 0.02em;
-      color: var(--text-light);
-      font-style: italic;
-    }
 
     /* =====================
        SERVICE PANELS — HORIZONTAL ALTERNATING
@@ -441,7 +432,7 @@
     .service-panel {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      min-height: 760px;
+      min-height: 640px;
     }
     .service-panel:nth-child(even) { direction: rtl; }
     .service-panel:nth-child(even) > * { direction: ltr; }
@@ -733,18 +724,9 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transform: scale(1.02);
-      transition: transform 2.4s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.6s ease;
-      filter: saturate(0.96);
+      transition: transform 0.75s ease;
     }
-    .dest-card:hover .dest-card-img {
-      transform: scale(1.09) translate(1%, -1%);
-      filter: saturate(1.08);
-    }
-    .dest-card .dest-card-text {
-      transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-    }
-    .dest-card:hover .dest-card-text { transform: translateY(-4px); }
+    .dest-card:hover .dest-card-img { transform: scale(1.04); }
     .dest-card-overlay {
       position: absolute;
       inset: 0;
@@ -816,56 +798,6 @@
       color: var(--text-mid);
       line-height: 1.8;
       margin-bottom: 28px;
-    }
-
-    /* =====================
-       FAQ PREVIEW
-    ===================== */
-    .faq-preview {
-      background-color: var(--cream);
-      padding: 104px 52px;
-      border-top: 1px solid var(--sand);
-    }
-    .faq-preview-inner {
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-    .faq-preview-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .faq-preview-header h2 {
-      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-      color: var(--navy);
-      margin-top: 4px;
-    }
-    .faq-preview-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px 64px;
-    }
-    .faq-preview-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: 1.35rem;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-    .faq-preview-item p {
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 0.88rem;
-      color: var(--text-mid);
-      line-height: 1.8;
-    }
-    .faq-preview-footer {
-      text-align: center;
-      margin-top: 56px;
-    }
-    @media (max-width: 768px) {
-      .faq-preview { padding: 72px 28px; }
-      .faq-preview-grid { grid-template-columns: 1fr; gap: 32px; }
-      .faq-preview-header { margin-bottom: 40px; }
     }
 
     /* =====================
@@ -1035,15 +967,6 @@
       align-items: center;
     }
     .footer-social-link:hover { color: var(--gold); }
-    .footer-email {
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: 0.84rem;
-      letter-spacing: 0.02em;
-      color: rgba(246,241,232,0.55);
-      transition: color 0.2s ease;
-    }
-    .footer-email:hover { color: var(--gold); }
     .footer-affil {
       font-family: 'Jost', sans-serif;
       font-weight: 300;
@@ -1217,7 +1140,7 @@
 
   <!-- HERO — FULL BLEED, BOTTOM-LEFT -->
   <section class="hero" aria-labelledby="hero-heading">
-    <div class="hero-bg" id="heroBg" role="img" aria-label="Capella Lodge, Lord Howe Island, aerial view"></div>
+    <div class="hero-bg" id="heroBg" role="img" aria-label="Dramatic mountain landscape at dusk"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <div class="hero-pre" data-animate>
@@ -1225,23 +1148,23 @@
         <span class="eyebrow">Luxury Travel Concierge &middot; Singapore</span>
       </div>
       <h1 id="hero-heading" data-animate>Travel the way<br>it should feel</h1>
-      <p class="hero-sub" data-animate>Hotel perks you won't find online. Complex itineraries, handled down to the last detail.</p>
+      <p class="hero-sub" data-animate>Hotel perks you can't get online. Complex itineraries, flawlessly handled.</p>
       <div class="hero-ctas" data-animate>
         <a href="start-planning.html" class="btn-gold">Plan a Trip</a>
         <a href="start-planning.html" class="btn-outline-light">Book a Hotel</a>
       </div>
     </div>
-    <span class="hero-caption" aria-hidden="true">Where the curious go</span>
+    <span class="hero-caption" aria-hidden="true">Amankora, Bhutan</span>
   </section>
 
   <!-- REFRAME -->
   <section class="reframe" aria-labelledby="reframe-heading">
     <div class="reframe-inner">
-      <p class="reframe-intro" data-animate>Outpost is for travellers who care about the details: for people who bring intention to everything they do, and want the same brought to their journeys.</p>
+      <p class="reframe-intro" data-animate>Outpost works with busy professionals who hold themselves and their journeys to a high standard, and want the same attention to detail applied to their travel as they do in the rest of their lives.</p>
       <span class="eyebrow" data-animate>A Better Way to Travel</span>
-      <p class="reframe-label" id="reframe-heading" data-animate>Exceptional hotels. Beautifully planned journeys. Every detail, handled.</p>
-      <p data-animate>For hotel bookings, there's no fee to you. The hotels pay us a commission. Through our preferred partnerships, your stay comes with benefits you won't find booking direct: room upgrades, daily breakfast, hotel credits, early check-in, late checkout.</p>
-      <p data-animate>For the bigger trips: multigenerational adventures, milestone celebrations, destinations that reward proper planning. We take care of everything end to end. The kind of trip that looks effortless because someone made sure it was.</p>
+      <p class="reframe-label" id="reframe-heading" data-animate>Exceptional hotels. Beautifully planned journeys. Every detail handled.</p>
+      <p data-animate>For hotel bookings, there's no fee to you — the hotels pay us a commission. Through our preferred partnerships, your stay comes with benefits you won't find booking direct: upgrades, breakfast, hotel credits, early check-in, late checkout.</p>
+      <p data-animate>For the bigger trips: multigenerational adventures, milestone celebrations, destinations that reward proper planning. We take care of everything end-to-end. The kind of trip that looks effortless because someone made sure it was.</p>
     </div>
   </section>
 
@@ -1251,20 +1174,19 @@
     <div class="service-panel">
       <div class="service-panel-img">
         <img
-          src="images/service-hotel-bookings.jpg"
-          alt="Nordic mountain landscape, hotel escape"
+          src="images/amankora-punakha-pool.jpg"
+          alt="Amankora Punakha Lodge pool at dusk, Bhutan"
           loading="lazy"
         />
       </div>
       <div class="service-panel-text">
         <span class="eyebrow" data-animate>Hotel Bookings</span>
-        <h2 data-animate>Tell us where<br>you're headed</h2>
-        <p data-animate>Already know where you're going? Share your destination, dates, and a rough budget. We'll take it from there, and make sure your stay comes with more than you'd get booking on your own.</p>
+        <h2 data-animate>Tell us where you're going</h2>
+        <p data-animate>Already know where you're headed? Share your destination, dates, and a rough budget. We'll take care of everything from there — and make sure your stay comes with more than you'd get booking on your own.</p>
         <ul class="service-panel-list" data-animate>
-          <li>No fees to you. The hotels pay us directly</li>
-          <li>Room upgrades, daily breakfast, and hotel credits</li>
+          <li>No fees — the hotels pay us directly</li>
+          <li>Upgrades, breakfast, and hotel credits</li>
           <li>Early check-in and late checkout where available</li>
-          <li>Preferred partner access at Aman, Shangri-La, Hyatt, Hilton, and more</li>
         </ul>
         <div class="service-panel-ctas" data-animate>
           <a href="start-planning.html" class="text-link">Fill out our online form &rarr;</a>
@@ -1276,16 +1198,16 @@
     <div class="service-panel">
       <div class="service-panel-img">
         <img
-          src="images/service-trip-planning.jpg"
-          alt="Remote mountain landscape, considered journey"
+          src="images/amankora-paro-lodge.jpg"
+          alt="Amankora Paro Lodge with Drukgyel Dzong view, Bhutan"
           loading="lazy"
         />
       </div>
       <div class="service-panel-text">
         <span class="eyebrow" data-animate>Trip Planning</span>
         <h2 data-animate>For the trips<br>worth planning well</h2>
-        <p data-animate>For bigger journeys: multigenerational travel, milestone celebrations, remote destinations, anything with real complexity. We work by consultation, taking the time to understand how you travel, what matters most, and what you'd rather not think about.</p>
-        <p data-animate>Every detail researched and cared for. Every moving part anticipated, long before it becomes a problem.</p>
+        <p data-animate>For bigger journeys: multigenerational travel, milestone celebrations, remote destinations, anything with real complexity. We work by consultation — taking the time to understand how you travel, what matters most, and what you'd rather not think about.</p>
+        <p data-animate>Every detail researched and cared for. Every moving part anticipated before it becomes a problem.</p>
         <div class="service-panel-ctas" data-animate>
           <a href="start-planning.html" class="text-link">Fill out our online form &rarr;</a>
           <a href="https://wa.me/6597514830?text=Hi%20Kristin%2C%20I%27d%20like%20to%20book%20a%20discovery%20call." class="text-link" target="_blank" rel="noopener noreferrer">Book a discovery call &rarr;</a>
@@ -1299,12 +1221,12 @@
   <section class="founder" aria-labelledby="founder-heading">
     <div class="founder-left" data-animate>
       <span class="founder-rule" aria-hidden="true"></span>
-      <p class="founder-quote" id="founder-heading">"I spent a decade sweating the details on high-stakes deals. Now I bring that same care to the trips that matter."</p>
+      <p class="founder-quote" id="founder-heading">"Outpost Travel is for the relentless high achievers I've worked alongside throughout my career."</p>
     </div>
     <div class="founder-right">
       <span class="eyebrow" data-animate>A Note from the Founder</span>
-      <p class="founder-bio" data-animate>Hi, I'm Kristin. I've spent over a decade in M&amp;A, corporate finance and tech across New York and Singapore, paying attention to the details others miss. Outpost is how I bring that same instinct to something more personal: the journeys that stay with you for life.</p>
-      <p class="founder-sig" data-animate>Kristin Lim</p>
+      <p class="founder-bio" data-animate>Over a decade in M&amp;A and corporate finance across New York and Singapore. I've always paid close attention to the details that others miss. Outpost is how I bring that same care to something more personal: the trips that stay with you.</p>
+      <p class="founder-sig" data-animate>Kristin Lim, Founder</p>
       <a href="about.html" class="text-link" data-animate>Read the full story &rarr;</a>
     </div>
   </section>
@@ -1320,22 +1242,22 @@
         <div class="process-step" data-animate>
           <span class="process-num">1.</span>
           <h3>Tell us about your trip</h3>
-          <p>Share your destination, dates, who's travelling, and what you're hoping for. Hotel stay or full journey, we'll take it from there.</p>
+          <p>Share your destination, dates, who's travelling, and what you're hoping for. Hotel stay or full trip, we'll take it from there.</p>
         </div>
         <div class="process-step" data-animate delay-1>
           <span class="process-num">2.</span>
-          <h3>We do the quiet work</h3>
+          <h3>We do the work</h3>
           <p>Hotels, operators, logistics. We come back with a clear recommendation, not an overwhelming list of options.</p>
         </div>
         <div class="process-step" data-animate delay-2>
           <span class="process-num">3.</span>
           <h3>We finalise the details</h3>
-          <p>Itinerary, budget, specifics. Once you're happy, we handle every booking and arrangement from our end.</p>
+          <p>We confirm itinerary, budget, and specifics together. Once you're happy, we handle all bookings and arrangements.</p>
         </div>
         <div class="process-step" data-animate delay-3>
           <span class="process-num">4.</span>
-          <h3>All you do is arrive</h3>
-          <p>We're in the background before and during your trip. Everything's been thought through. You just show up and take it in.</p>
+          <h3>You just show up</h3>
+          <p>We're in the background before and during your trip. Everything has been thought of. All you have to do is be there.</p>
         </div>
       </div>
     </div>
@@ -1390,7 +1312,7 @@
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">China</div>
-            <div class="dest-card-line">Ancient, vast, endlessly surprising.</div>
+            <div class="dest-card-line">Ancient, vast, and endlessly surprising.</div>
           </div>
         </div>
         <div class="dest-card" data-animate delay-2>
@@ -1406,7 +1328,7 @@
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">Antarctica</div>
-            <div class="dest-card-line">The last true frontier. Worth every mile.</div>
+            <div class="dest-card-line">The last frontier. Worth every mile.</div>
           </div>
         </div>
         <div class="dest-card" data-animate delay-1>
@@ -1414,7 +1336,7 @@
           <div class="dest-card-overlay" aria-hidden="true"></div>
           <div class="dest-card-text">
             <div class="dest-card-name">Safaris</div>
-            <div class="dest-card-line">The wild, up close. Nothing quite prepares you for it.</div>
+            <div class="dest-card-line">The wild, up close. Nothing quite prepares you.</div>
           </div>
         </div>
         <div class="dest-card" data-animate delay-2>
@@ -1437,39 +1359,8 @@
   <section class="brainstorm" aria-label="Open to ideas">
     <div class="brainstorm-inner" data-animate>
       <p class="brainstorm-heading">No idea where you want to go next?</p>
-      <p class="brainstorm-body">No problem. This is our favourite part. Book a discovery call and we'll bring ideas to the table.</p>
+      <p class="brainstorm-body">No problem — we love brainstorming. Set up a discovery call and we'd be happy to share some ideas.</p>
       <a href="https://wa.me/6597514830?text=Hi%20Kristin%2C%20I%27d%20like%20to%20book%20a%20discovery%20call." class="text-link" target="_blank" rel="noopener noreferrer">Book a discovery call &rarr;</a>
-    </div>
-  </section>
-
-  <!-- FAQ PREVIEW -->
-  <section class="faq-preview" aria-labelledby="faq-preview-heading">
-    <div class="faq-preview-inner">
-      <div class="faq-preview-header" data-animate>
-        <span class="eyebrow">Good to Know</span>
-        <h2 id="faq-preview-heading">Common questions</h2>
-      </div>
-      <div class="faq-preview-grid">
-        <div class="faq-preview-item" data-animate>
-          <h3>Is there a fee?</h3>
-          <p>For hotel bookings, no. The hotels pay us a commission and you still get the VIP perks. For end-to-end trip planning, we access trade rates through a trusted network of ground suppliers; our margin is built into the trip cost, and overall pricing stays competitive.</p>
-        </div>
-        <div class="faq-preview-item" data-animate delay-1>
-          <h3>What budget should I plan for?</h3>
-          <p>Hotels typically from USD 150 to 300 per night, depending on region. End-to-end journeys from USD 300 to 500 per person per day, excluding flights. We'll always be straightforward about what's achievable.</p>
-        </div>
-        <div class="faq-preview-item" data-animate delay-2>
-          <h3>What happens on a discovery call?</h3>
-          <p>A short, no-obligation chat, usually 15 to 20 minutes, to understand your trip and whether we're the right fit. No pressure. No commitment.</p>
-        </div>
-        <div class="faq-preview-item" data-animate delay-3>
-          <h3>How do we get started?</h3>
-          <p>Fill out the Start Planning form, message on WhatsApp, or email us. Tell us what you have in mind and we'll take it from there.</p>
-        </div>
-      </div>
-      <div class="faq-preview-footer" data-animate>
-        <a href="faq.html" class="text-link">See all questions &rarr;</a>
-      </div>
     </div>
   </section>
 
@@ -1480,10 +1371,10 @@
     <div class="lead-content">
       <span class="eyebrow" data-animate>Let's Start Planning</span>
       <h2 id="lead-heading" data-animate>Great travel starts with<br>the right conversation</h2>
-      <p class="lead-sub" data-animate>Even a vague idea is a good place to start. Tell us where your mind keeps going. We'll help you figure out the rest.</p>
+      <p class="lead-sub" data-animate>Even a vague idea is a good place to start. Tell us where your mind keeps going; we'll help you figure out the rest.</p>
       <div class="lead-ctas" data-animate>
         <a href="start-planning.html" class="btn-gold">Start Planning</a>
-        <a href="https://wa.me/6597514830?text=Hi%20Outpost%20Travel%2C%20here%27s%20the%20trip%20I%27m%20looking%20to%20plan%3A%20" class="btn-outline-light" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+        <a href="https://wa.me/6597514830?text=Hi%20Kristin%2C%20I%20came%20across%20Outpost%20Travel%20and%20here%27s%20what%20I%27m%20thinking%20about%20for%20my%20next%20trip%3A%20" class="btn-outline-light" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -1492,15 +1383,15 @@
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-subscribe">
-        <span class="footer-eyebrow">The Monthly Dispatch</span>
-        <p>One destination. One hotel worth knowing. One reason to go now. Straight to your inbox, once a month.</p>
+        <span class="footer-eyebrow">Stay Inspired</span>
+        <p>Destination guides, travel inspiration, and the occasional unmissable offer. Straight to your inbox.</p>
         <form class="footer-form" name="newsletter" netlify netlify-honeypot="bot-field" aria-label="Newsletter signup">
           <input type="hidden" name="form-name" value="newsletter" />
           <input type="text" name="bot-field" style="display:none" />
           <input type="email" name="email" placeholder="Your email address" aria-label="Email address" autocomplete="email" required />
           <button type="submit">Subscribe</button>
         </form>
-        <p class="footer-micro">No spam. Unsubscribe any time.</p>
+        <p class="footer-micro">No spam. Just good travel.</p>
       </div>
       <div class="footer-info">
         <ul class="footer-nav-inline" role="list">
@@ -1512,7 +1403,9 @@
           <a href="https://wa.me/6597514830" class="footer-social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
           </a>
-          <a href="mailto:hello@outposttravel.co" class="footer-email">hello@outposttravel.co</a>
+          <a href="mailto:kristin@outposttravel.co" class="footer-social-link" aria-label="Email">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
         </div>
         <div class="footer-affil">Independent affiliate of <a href="https://www.alchemisttravel.com/" target="_blank" rel="noopener noreferrer" style="color:inherit; border-bottom:1px solid rgba(246,241,232,0.18); transition:color 0.2s ease;" onmouseover="this.style.color='#B8956A'" onmouseout="this.style.color='inherit'">Alchemist Travel</a> &middot; Serandipians member</div>
         <p class="footer-tagline">The effortless way to go further.</p>
