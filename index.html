@@ -1060,11 +1060,12 @@
       transition: color 0.2s ease;
     }
     .footer-email:hover { color: var(--gold); }
-    .footer-affil {
+    .footer-affil,
+    .footer-location {
       font-family: 'Jost', sans-serif;
       font-weight: 300;
-      font-size: 0.7rem;
-      color: rgba(246,241,232,0.26);
+      font-size: 0.82rem;
+      color: rgba(246,241,232,0.4);
       text-align: right;
       line-height: 1.7;
     }
@@ -1186,7 +1187,7 @@
       .footer-inner { grid-template-columns: 1fr; gap: 48px; }
       .footer-info { align-items: flex-start; }
       .footer-nav-inline { justify-content: flex-start; }
-      .footer-affil { text-align: left; }
+      .footer-affil, .footer-location { text-align: left; }
       .footer-bottom { flex-direction: column; gap: 6px; }
 
       /* Hero CTAs */
@@ -1238,7 +1239,7 @@
     <div class="hero-content">
       <div class="hero-pre" data-animate>
         <span class="hero-rule" aria-hidden="true"></span>
-        <span class="eyebrow">Luxury Travel Concierge &middot; Singapore</span>
+        <span class="eyebrow">Luxury Travel Concierge</span>
       </div>
       <h1 id="hero-heading" data-animate>Travel the way<br>it should feel</h1>
       <p class="hero-sub" data-animate>Hotel perks you won't find online. Complex itineraries, handled down to the last detail.</p>
@@ -1530,6 +1531,7 @@
           </a>
           <a href="mailto:hello@outposttravel.co" class="footer-email">hello@outposttravel.co</a>
         </div>
+        <p class="footer-location">Singapore-based, working with curious travellers worldwide.</p>
         <div class="footer-affil">Independent affiliate of <a href="https://www.alchemisttravel.com/" target="_blank" rel="noopener noreferrer" style="color:inherit; border-bottom:1px solid rgba(246,241,232,0.18); transition:color 0.2s ease;" onmouseover="this.style.color='#B8956A'" onmouseout="this.style.color='inherit'">Alchemist Travel</a> &middot; Serandipians member</div>
         <p class="footer-tagline">The effortless way to go further.</p>
       </div>
